@@ -1,2 +1,1 @@
-# tag
-TDWG Architecture Group
+# TDWG Architecture Group
