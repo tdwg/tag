@@ -34,7 +34,7 @@ According to TDWG Constitution, the charter may be revised by the the TDWG Execu
 
 The chair shall be elected by the TDWG membership. The chair is responsible for appointing sub-committee members and a deputy chair. The TAG shall contain between 5 and 9 members, ideally with representation from core, standards maintenance interest groups and major implementors. The TAG may call on external, expert assistance as required.
 
-TECHNICAL### Meetings, documentation, and reporting
+### Meetings, documentation, and reporting
 
 The TAG reports to the TDWG executive.
 
