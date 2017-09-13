@@ -1,5 +1,7 @@
 # TDWG Technical Architecture Group (`TAG`)
 
+The Technical Architecture Group is responsible for ensuring that TDWG standards work effectively with each other, as well as with standards used more widely in natural and information sciences.  This is done primarily by giving technical advice to the Executive Committee, as well as Interest and Task Groups, through the review of Interest and Task Group charters, reports, and draft standards.
+
 # Charter of the TDWG TAG
 
 ## Mission
@@ -18,7 +20,7 @@ On behalf of the executive, maintain oversight and report on:
 * Coordination of technical activities across Interest Groups
 * Completeness of standards documentation and management
 * Interaction with external standards activity
-
+.
 Working with the membership to advance a common standards framework:
 
 * Coordinate update and maintenance of the TDWG Technical "Road Map" and best practice documentation
