@@ -1,4 +1,6 @@
-# Charter of the TDWG TAG
+tag-fs working copy of the TAG Charter: for review and annotation
+
+# TDWG TAG
 
 ## Mission
 
