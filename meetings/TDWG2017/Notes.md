@@ -123,8 +123,8 @@ Hard to read, but try it yourself and you can make the text bigger.  At the mome
 
 ## Action Items ##
 
-1. Charter a task group to revise the GUID-AS (etc)  Issue: GH-14
-1. TAG and Process should begin with a road-map document (with graphic representations) showing relationships among TDWG IG/TGs as well as a graph depicting the view from each IG/TG.  Each IG/TG should validate/revise the IG/TG centered view of the TDWG landscape.  Issue: GH-16
+1. Charter a task group to revise the GUID-AS (etc)  Issue: [GH-14](https://github.com/tdwg/tag/issues/14)
+1. TAG and Process should begin with a road-map document (with graphic representations) showing relationships among TDWG IG/TGs as well as a graph depicting the view from each IG/TG.  Each IG/TG should validate/revise the IG/TG centered view of the TDWG landscape.  Issue: [GH-16](https://github.com/tdwg/tag/issues/16)
 1. Investigate Zoom, Go-to-Meeting to support monthly conference calls
 
 
