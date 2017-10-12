@@ -1,4 +1,4 @@
-# tdwg/tag-fs
+# tdwg/tag
 
 A repository for the deliberations and workings of the functional subcommittee:
 
