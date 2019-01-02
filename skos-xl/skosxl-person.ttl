@@ -1,0 +1,119 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix tnc: <http://rs.tdwg.org/tnc/> .
+@prefix tex: <http://rs.tdwg.org/tnc/example/> .
+
+
+<http://www.tropicos.org/Person/10766> a foaf:Person;
+	skosxl:prefLabel tex:62eb5840-c7fd-4965-b080-b69aa57f71ae;
+	skosxl:altLabel tex:1be0ca20-0e29-412a-9092-e41b1a40b272;
+	skosxl:altLabel tex:7621ed07-c3a7-41f2-985a-8fc6c3bc69e9;
+	skosxl:altLabel tex:fc83f9e5-0b8e-4e8d-8393-0eb6eb163bab;
+	foaf:familyName "van der Sande Lacoste";
+	foaf:givenName "Cornelius Marinus";
+	tnc:ipniId "8882-1";
+	tnc:country "Netherlands";
+	tnc:dateRange "1815-1887".
+
+tex:62eb5840-c7fd-4965-b080-b69aa57f71ae a skosxl:Label;
+	skosxl:literalForm "Cornelius Marinus van der Sande Lacoste";
+	dcterms:identifier "62eb5840-c7fd-4965-b080-b69aa57f71ae".
+
+tex:1be0ca20-0e29-412a-9092-e41b1a40b272 a skosxl:Label;
+	skosxl:literalForm "C.M. van der Sande Lacoste";
+	dcterms:identifier "1be0ca20-0e29-412a-9092-e41b1a40b272".
+
+tex:7621ed07-c3a7-41f2-985a-8fc6c3bc69e9 a skosxl:Label;
+	skosxl:literalForm "C. M. v. d. Sande Lacoste";
+	dcterms:identifier "7621ed07-c3a7-41f2-985a-8fc6c3bc69e9".
+
+tex:fc83f9e5-0b8e-4e8d-8393-0eb6eb163bab a skosxl:Label;
+	skosxl:literalForm "Sande Lac.";
+	dcterms:identifier "fc83f9e5-0b8e-4e8d-8393-0eb6eb163bab".
+
+<http://www.tropicos.org/Person/2> a foaf:Person;
+	skosxl:prefLabel tex:f2d1ac33-8ff0-4545-a8af-c3afd2edfa62;
+	skosxl:altLabel tex:697b823b-a043-4161-9c46-3b05294ae50d;
+	skosxl:altLabel tex:276ca214-15ea-41db-b2f8-6238c39e532f;
+	skosxl:altLabel tex:d7fe9f2c-2898-4b8c-afe7-7424cbdf58af;
+	skosxl:altLabel tex:9d5b5968-b24f-461e-8e74-02f1eb432722;
+	foaf:familyName "Müller";
+	foaf:givenName "Carl";
+	tnc:ipniId "23703-1";
+	tnc:country "Germany";
+	tnc:dateRange "1818–1899".
+
+tex:f2d1ac33-8ff0-4545-a8af-c3afd2edfa62 a skosxl:Label;
+	skosxl:literalForm "Carl Müller";
+	dcterms:identifier "f2d1ac33-8ff0-4545-a8af-c3afd2edfa62".
+
+tex:697b823b-a043-4161-9c46-3b05294ae50d a skosxl:Label;
+	skosxl:literalForm "C. Müller";
+	dcterms:identifier "697b823b-a043-4161-9c46-3b05294ae50d".
+
+tex:276ca214-15ea-41db-b2f8-6238c39e532f a skosxl:Label;
+	skosxl:literalForm "C. Müller Hal.";
+	dcterms:identifier "276ca214-15ea-41db-b2f8-6238c39e532f".
+
+tex:d7fe9f2c-2898-4b8c-afe7-7424cbdf58af a skosxl:Label;
+	skosxl:literalForm "Johann Karl (Carl) August (Friedrich Wilhelm) Müller";
+	dcterms:identifier "d7fe9f2c-2898-4b8c-afe7-7424cbdf58af".
+
+tex:9d5b5968-b24f-461e-8e74-02f1eb432722 a skosxl:Label;
+	skosxl:literalForm "Müll. Hal.";
+	dcterms:identifier "9d5b5968-b24f-461e-8e74-02f1eb432722".
+
+<http://www.tropicos.org/Person/960> a foaf:Person;
+	skosxl:prefLabel tex:37589c1d-1cd8-49c8-b7b3-026139579e60;
+	skosxl:altLabel tex:d0e968ee-6d64-4cee-808c-47eff460d616;
+	skosxl:altLabel tex:66c29209-c435-49b9-b6be-9c47b7ca20c9;
+	foaf:familyName "van den Bosch";
+	foaf:givenName "Roelof Benjamin";
+	tnc:ipniId "1005-1";
+	tnc:country "Netherlands";
+	tnc:dateRange "1810-1862".
+
+tex:37589c1d-1cd8-49c8-b7b3-026139579e60 a skosxl:Label;
+	skosxl:literalForm "Roelof Benjamin van den Bosch";
+	dcterms:identifier "37589c1d-1cd8-49c8-b7b3-026139579e60".
+
+tex:d0e968ee-6d64-4cee-808c-47eff460d616 a skosxl:Label;
+	skosxl:literalForm "Bosch";
+	dcterms:identifier "d0e968ee-6d64-4cee-808c-47eff460d616".
+
+tex:66c29209-c435-49b9-b6be-9c47b7ca20c9 a skosxl:Label;
+	skosxl:literalForm "R. B. Bosch";
+	dcterms:identifier "66c29209-c435-49b9-b6be-9c47b7ca20c9".
+
+<http://www.tropicos.org/Person/2011> a foaf:Person;
+	skosxl:prefLabel tex:07208fe2-0454-4352-adb9-9446bfa03d77;
+	skosxl:altLabel tex:1c3c3744-53a3-4596-975a-f62657d6dd20;
+	skosxl:altLabel tex:cc3be790-5010-4192-b7f7-ef9c1a15fb3d;
+	skosxl:altLabel tex:c782eb1c-c3a5-46e2-9344-b4fd3dc6b78d;
+	foaf:familyName "Paris";
+	foaf:givenName "Jean Édouard Gabriel Narcisse";
+	tnc:ipniId "24547-1";
+	tnc:country "France";
+	tnc:dateRange "1827-1911".
+
+tex:07208fe2-0454-4352-adb9-9446bfa03d77 a skosxl:Label;
+	skosxl:literalForm "Jean Édouard Gabriel Narcisse Paris";
+	dcterms:identifier "07208fe2-0454-4352-adb9-9446bfa03d77".
+
+tex:1c3c3744-53a3-4596-975a-f62657d6dd20 a skosxl:Label;
+	skosxl:literalForm "J. É. G. N. Paris";
+	dcterms:identifier "1c3c3744-53a3-4596-975a-f62657d6dd20".
+
+tex:cc3be790-5010-4192-b7f7-ef9c1a15fb3d a skosxl:Label;
+	skosxl:literalForm "Paris";
+	dcterms:identifier "cc3be790-5010-4192-b7f7-ef9c1a15fb3d".
+
+tex:c782eb1c-c3a5-46e2-9344-b4fd3dc6b78d a skosxl:Label;
+	skosxl:literalForm "Paris, Jean Édouard Gabriel Narcisse";
+	dcterms:identifier "c782eb1c-c3a5-46e2-9344-b4fd3dc6b78d".

@@ -1,0 +1,6 @@
+primary_key,skosxl_literalForm,tnc_authorship,tnc_canonicalName,tnc_genus,tnc_specificEpithet,tnc_normalizedTo,tnc_orthErrorCorrection,labelOf,type
+f92c1382-408b-5790-abc3-f158178be286,Dicranum braunii Müll. Hal.,Müll. Hal.,Dicranum braunii,Dicranum,braunii,,,thing1,prefLabel
+bf6d8361-1cb7-580a-bd3f-dc8bea94b893,Dicranum braunii Mull. Hal.,Mull. Hal.,Dicranum braunii,Dicranum,braunii,,f92c1382-408b-5790-abc3-f158178be286,thing1,altLabel
+8fbfc7a2-8565-5cd7-abe7-2b1d8caa3e7b,Dicranoloma braunii (Bosch & Sande Lac.) Paris,(Bosch & Sande Lac.) Paris,Dicranoloma braunii,Dicranoloma,braunii,,,thing2,prefLabel
+7a74c523-abf3-5176-84bf-9e85ac09497f,Dicranum braunii Müll.Hal. ex Bosch & Sande Lac.,Müll.Hal. ex Bosch & Sande Lac.,Dicranum braunii,Dicranum,braunii,1d6b6cf7-d66e-5712-8b0a-0cab58120c9e,,thing3,altLabel
+1d6b6cf7-d66e-5712-8b0a-0cab58120c9e,Dicranum braunii Müll. Hal. ex Bosch & Sande Lac.,Müll. Hal. ex Bosch & Sande Lac.,Dicranum braunii,Dicranum,braunii,,,thing3,prefLabel

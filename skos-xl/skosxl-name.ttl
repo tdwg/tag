@@ -1,0 +1,82 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+@prefix tnc: <http://rs.tdwg.org/tnc/> .
+@prefix tex: <http://rs.tdwg.org/tnc/example/> .
+
+tnc:normalizedTo rdfs:subPropertyOf skosxl:labelRelation.
+tnc:orthErrorCorrection rdfs:subPropertyOf skosxl:labelRelation.
+tnc:hasBasionym a rdf:Property.
+tnc:hasDesignation a rdf:Property.
+
+tex:thing1 a tnc:NameThing;
+	skosxl:prefLabel tex:f92c1382-408b-5790-abc3-f158178be286;
+	skosxl:altLabel tex:bf6d8361-1cb7-580a-bd3f-dc8bea94b893;
+	tnc:author <http://www.tropicos.org/Person/2>;
+	tnc:exAuthor <http://www.tropicos.org/Person/960>;
+	tnc:exAuthor <http://www.tropicos.org/Person/10766>;
+	tnc:code "botanical".
+
+tex:f92c1382-408b-5790-abc3-f158178be286 a skosxl:Label;
+	skosxl:literalForm "Dicranum braunii Müll. Hal.";
+	tnc:authorship "Müll. Hal.";
+	tnc:canonicalName "Dicranum braunii";
+	dcterms:identifier "f92c1382-408b-5790-abc3-f158178be286";
+	tnc:genus "Dicranum";
+	tnc:specificEpithet "braunii".
+
+tex:bf6d8361-1cb7-580a-bd3f-dc8bea94b893 a skosxl:Label;
+	skosxl:literalForm "Dicranum braunii Mull. Hal.";
+	tnc:authorship "Mull. Hal.";
+	tnc:canonicalName "Dicranum braunii";
+	dcterms:identifier "bf6d8361-1cb7-580a-bd3f-dc8bea94b893";
+	tnc:genus "Dicranum";
+	tnc:specificEpithet "braunii";
+	tnc:orthErrorCorrection tex:f92c1382-408b-5790-abc3-f158178be286.
+
+tex:thing2 a tnc:NameThing;
+	skosxl:prefLabel tex:8fbfc7a2-8565-5cd7-abe7-2b1d8caa3e7b;
+	tnc:code "botanical";
+	tnc:author <http://www.tropicos.org/Person/2011>;
+	tnc:originalAuthor <http://www.tropicos.org/Person/10766>;
+	tnc:originalAuthor <http://www.tropicos.org/Person/960>;
+	tnc:hasBasionym tex:thing1.
+
+tex:8fbfc7a2-8565-5cd7-abe7-2b1d8caa3e7b a skosxl:Label;
+	skosxl:literalForm "Dicranoloma braunii (Bosch & Sande Lac.) Paris";
+	tnc:authorship "(Bosch & Sande Lac.) Paris";
+	tnc:canonicalName "Dicranoloma braunii";
+	dcterms:identifier "8fbfc7a2-8565-5cd7-abe7-2b1d8caa3e7b";
+	tnc:genus "Dicranoloma";
+	tnc:specificEpithet "braunii".
+
+tex:thing3 a tnc:NameThing;
+	skosxl:prefLabel tex:1d6b6cf7-d66e-5712-8b0a-0cab58120c9e;
+	skosxl:altLabel tex:7a74c523-abf3-5176-84bf-9e85ac09497f;
+	tnc:author <http://www.tropicos.org/Person/960>;
+	tnc:author <http://www.tropicos.org/Person/10766>;
+	tnc:exAuthor <http://www.tropicos.org/Person/2>;
+	tnc:code "botanical";
+	tnc:hasDesignation tex:thing1.
+
+tex:1d6b6cf7-d66e-5712-8b0a-0cab58120c9e a skosxl:Label;
+	skosxl:literalForm "Dicranum braunii Müll. Hal. ex Bosch & Sande Lac.";
+	tnc:authorship "Müll. Hal. ex Bosch & Sande Lac.";
+	tnc:canonicalName "Dicranum braunii";
+	dcterms:identifier "1d6b6cf7-d66e-5712-8b0a-0cab58120c9e";
+	tnc:genus "Dicranum";
+	tnc:specificEpithet "braunii".
+
+tex:7a74c523-abf3-5176-84bf-9e85ac09497f a skosxl:Label;
+	skosxl:literalForm "Dicranum braunii Müll.Hal. ex Bosch & Sande Lac.";
+	tnc:authorship "Müll.Hal. ex Bosch & Sande Lac.";
+	tnc:canonicalName "Dicranum braunii";
+	dcterms:identifier "7a74c523-abf3-5176-84bf-9e85ac09497f";
+	tnc:genus "Dicranum";
+	tnc:specificEpithet "braunii";
+	tnc:normalizedTo tex:1d6b6cf7-d66e-5712-8b0a-0cab58120c9e.
+

@@ -1,0 +1,8 @@
+nameThing,relationship,person
+thing1,author,http://www.tropicos.org/Person/2
+thing2,author,http://www.tropicos.org/Person/2011
+thing2,originalAuthor,http://www.tropicos.org/Person/960
+thing2,originalAuthor,http://www.tropicos.org/Person/10766
+thing3,author,http://www.tropicos.org/Person/960
+thing3,author,http://www.tropicos.org/Person/10766
+thing3,exAuthor,http://www.tropicos.org/Person/2
