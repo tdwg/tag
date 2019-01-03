@@ -26,7 +26,7 @@ Although SKOS-XL terms can be used with labels associated with any kind of thing
 
 ## Getty Thesaurus example
 
-A good model for using SKOS-XL to manage label information is the Getty Thesauri.  For example, see the machine-readable metadata for the [Getty Thesaurus of Geographic Names entry for China](http://vocab.getty.edu/page/tgn/1000111) in [RDF/Turtle](http://vocab.getty.edu/tgn/1000111.ttl) or [JSON-LD](http://vocab.getty.edu/tgn/1000111.jsonld).  See the Appendix for an abbreviation of this example in Turtle.
+A good model for using SKOS-XL to manage label information is the Getty Thesauri.  For example, see the machine-readable metadata for the [Getty Thesaurus of Geographic Names entry for China](http://vocab.getty.edu/page/tgn/1000111) in [RDF/Turtle](http://vocab.getty.edu/tgn/1000111.ttl) or [JSON-LD](http://vocab.getty.edu/tgn/1000111.jsonld).  See the [Appendix](#appendix---skos-xl-used-in-the-getty-thesaurus-of-geographic-names-entry-for-china) for an abbreviation of this example in Turtle.
 
 ## Conventional databases vs. Linked Data
 
@@ -56,7 +56,7 @@ These examples are intended to show how SKOS-XL could work in several TDWG conte
 
 The example includes four people.  For convenience, I used the [Tropicos IRI](http://www.tropicos.org/PersonSearch.aspx) as a unique identifier to serve as the primary key for each person.  Data about the four people are in the table [person.csv](person.csv).  Each row in that table represents a curated record for that person, and includes information about that person that is NOT label (names, abbreviations, etc.) information.  Since the focus of this example is description and provenance of labels, I haven't made any attempt to show how the provenance of this other information might be documented. 
 
-Each row in the table [personLabels.csv](personLabels.csv) represents an instance of a skosxl:Label.  Each label has been assigned a unique UUID identifier to distinguish it from other labels.  The literal value of the label is designated by the property skosxl:literalForm, and the foreign key linking the label to the person it denotes is in the labelOf column.  In this example, the only other column in this table is the type column, which indicates whether a particular label is consiedered the one preferred label for that person, or one of several alternate labels for that person.  However, there could be many additional columns in this table to indicate additional metadata about the label, such as its source, the date it was added to the database, etc.  See the Appendix for examples of additional properties.
+Each row in the table [personLabels.csv](personLabels.csv) represents an instance of a skosxl:Label.  Each label has been assigned a unique UUID identifier to distinguish it from other labels.  The literal value of the label is designated by the property skosxl:literalForm, and the foreign key linking the label to the person it denotes is in the labelOf column.  In this example, the only other column in this table is the type column, which indicates whether a particular label is consiedered the one preferred label for that person, or one of several alternate labels for that person.  However, there could be many additional columns in this table to indicate additional metadata about the label, such as its source, the date it was added to the database, etc.  See the [Appendix](#appendix---skos-xl-used-in-the-getty-thesaurus-of-geographic-names-entry-for-china) for examples of additional properties.
 
 ## Machine-readable metadata about people
 
