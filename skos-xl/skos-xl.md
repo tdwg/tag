@@ -1,6 +1,6 @@
 # SKOS-XL as a general model for labels within TDWG standards
 
-Steve Baskauf  2019-01-02
+Steve Baskauf  2019-01-03
 
 Note: The term IRI (Internationalized Resource Identifier) can be considered to be synonymous with URI (Uniform Resource Identifier) throughout this document.
 
@@ -167,9 +167,9 @@ tnc:orthErrorCorrection rdfs:subPropertyOf skosxl:labelRelation.
 at the beginning of the document.  
 
 
-# Appendix - XKOS-XL used in the Getty Thesaurus of Geographic Names entry for China
+# Appendix - SKOS-XL used in the Getty Thesaurus of Geographic Names entry for China
 
-The full dataset can be downloade from <http://vocab.getty.edu/tgn/1000111.ttl>
+The full dataset can be downloaded from <http://vocab.getty.edu/tgn/1000111.ttl>
 
 ```turtle
 @prefix aat: <http://vocab.getty.edu/aat/> .
