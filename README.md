@@ -26,6 +26,8 @@ Rod Page - University of Glasgow. Wikidata and Linked Data applications. [rdmpag
 
 Camila Andrea Plata Corredor - Sistema de Información sobre Biodiversidad de Colombia, Instituto de Investigación de Recursos Biológicos Alexander von Humboldt. Plinian Core Task Group. [cplata@humboldt.org.co](mailto:cplata@humboldt.org.co)
 
+Tim Robertson - Global Biodiversity Information Facility (GBIF). TDWG Infrastructure Sub Committee Chair and member of the Darwin Core Maintenance Group. [trobertson@gbif.org](mailto:trobertson@gbif.org)
+
 Robert Sanderson - Yale Peabody Museum. International Image Interoperability Framework (IIIF), W3C JSON-LD and Open Annotation. [robert.sanderson@yale.edu](mailto:robert.sanderson@yale.edu)
 
 Sarah Vincent - Natural History Museum, London. Latimer Core (Collection Descriptions) Task Group. [s.vincent@nhm.ac.uk](mailto:s.vincent@nhm.ac.uk)
