@@ -30,14 +30,11 @@ Tim Robertson - Global Biodiversity Information Facility (GBIF). TDWG Infrastruc
 
 Robert Sanderson - Yale Peabody Museum. International Image Interoperability Framework (IIIF), W3C JSON-LD and Open Annotation. [robert.sanderson@yale.edu](mailto:robert.sanderson@yale.edu)
 
+David Shorthouse - Agriculture and Agri-Food Canada. People in Biodiversity Data Task Group. [davidpshorthouse@gmail.com](mailto:davidpshorthouse@gmail.com)
+
 Sarah Vincent - Natural History Museum, London. Latimer Core (Collection Descriptions) Task Group. [s.vincent@nhm.ac.uk](mailto:s.vincent@nhm.ac.uk)
 
 John Wieczorek - VertNet. Rauthiflor LLC. Darwin Core Maintenance Group. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)
 
-## provisionally committed
-
-David Shorthouse - Agriculture and Agri-Food Canada. People in Biodiversity Data Task Group. [davidpshorthouse@gmail.com](mailto:davidpshorthouse@gmail.com)
-
-
 ----
-Revised 2022-03-20
+Revised 2022-04-26
