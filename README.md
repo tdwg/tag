@@ -20,7 +20,7 @@ James Macklin - Agriculture and Agri-Food Canada. Past chair. [james.macklin@agr
 
 Raïssa Meyer -  Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research. GBWG - Sustainable Darwin Core MIxS Interoperability Task Group. [raissa.meyer@awi.de](mailto:raissa.meyer@awi.de)
 
-Ben Norton - North Carolina Museum of Natural Sciences - TDWG Biodiversity Services and Clients Interest Group and Cameratrap DP. [ben.norton@naturalsciences.org](mailto:ben.norton@naturalsciences.org)
+Ben Norton (deputy chair) - North Carolina Museum of Natural Sciences - TDWG Biodiversity Services and Clients Interest Group and Cameratrap DP. [ben.norton@naturalsciences.org](mailto:ben.norton@naturalsciences.org)
 
 Rod Page - University of Glasgow. Wikidata and Linked Data applications. [rdmpage@gmail.com](mailto:rdmpage@gmail.com)
 
@@ -37,4 +37,4 @@ Sarah Vincent - Natural History Museum, London. Latimer Core (Collection Descrip
 John Wieczorek - VertNet. Rauthiflor LLC. Darwin Core Maintenance Group. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)
 
 ----
-Revised 2022-04-26
+Revised 2022-05-03
