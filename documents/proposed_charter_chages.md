@@ -53,7 +53,7 @@ The TAG reports to the TDWG executive.
 
 The TAG will maintain a public GitHub repository for all TAG documentation, and issue and request management.
 
-The TAG will formally convene at least twice each year. Meetings will be conducted using internet technologies and members may participate online. Agenda for formal meetings will be prepared by the chair and distributed to members in advance of the meeting.
+The TAG will formally convene at least twice each year. Meetings will be conducted using internet technologies and members may participate online. Agenda for formal meetings will be prepared by the chair and distributed to members in advance of the meeting. In circumstances where a vote is necessary, responses by the voting deadline of at least half of the members will be required in order for the vote to be considered valid.
 
 Because the TAG may receive time sensitive Executive Requests for advice or response at any time, a combination of issue tracker, e-mail and internet technologies will be used to conduct TAG business online, and to convene extra-ordinary meetings at short notice, as required.
 
