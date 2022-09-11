@@ -2,7 +2,7 @@
 
 The Technical Architecture Group is a Functional Subcommittee (FS) of the TDWG Executive - responsible for ensuring that TDWG standards work effectively with each other, as well as with standards used more widely in natural and information sciences.  This is done primarily by giving technical advice to the Executive Committee, as well as Interest and Task Groups, as requested and through the review of Interest and Task Group charters, reports, and draft standards.
 
-The charter of the group can be viewed at <https://www.tdwg.org/about/committees/tag/>.
+The charter of the group can be viewed at <https://www.tdwg.org/about/committees/tag/>. Meeting notes can be viewed in the `meetings` directory of this repository.
 
 ## TAG members - 2022
 
@@ -37,4 +37,4 @@ Sarah Vincent - Natural History Museum, London. Latimer Core (Collection Descrip
 John Wieczorek - VertNet. Rauthiflor LLC. Darwin Core Maintenance Group. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)
 
 ----
-Revised 2022-05-03
+Revised 2022-09-11
