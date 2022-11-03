@@ -75,13 +75,46 @@ Example data for <https://macaulaylibrary.org/asset/451198811> (sound recording 
 ]
 ```
 
-## Multiple life stages in museum sample
+## Multiple life stages/sexes in museum sample
 
-https://github.com/tdwg/dwc-qa/issues/192
+Use case inspired by https://github.com/tdwg/dwc-qa/issues/192, 2022-10-28
+
+A museum stores multiple individuals with several life stages and sexes retrieved from a single material sample, with a single catalog number. How can this information be recorded under a single record?
+
+Example data:
+
+```
+[
+    {
+        "dwc:individualCount": 5,
+        "dwc:sex": "male",
+        "dwc:lifeStage": "nymph"
+    },
+    {
+        "dwc:individualCount": 3,
+        "dwc:sex": "female",
+        "dwc:lifeStage": "nymph"
+    },
+    {
+        "dwc:individualCount": 1,
+        "dwc:sex": "male",
+        "dwc:lifeStage": "adult"
+    },
+    {
+        "dwc:individualCount": 4,
+        "dwc:sex": "female",
+        "dwc:lifeStage": "adult"
+    }
+]
+```
 
 ## Latimer Core
 
 Ben Norton
+
+# See also
+
+[Examples of list values used for multiple Regions of Interest and Service Access Points](https://github.com/tdwg/ac/blob/master/roi-recipes.md) (discussed on the [existing precedents page](https://github.com/tdwg/tag/blob/master/complex_values/existing_precedents.md)).
 
 ----
 Revised 2022-11-03
