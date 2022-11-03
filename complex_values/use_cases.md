@@ -24,9 +24,56 @@ In order to facilitate end users' recognition of the existence of these multiple
    
 The key point that I want to communicate is the variation in both quantities and types of effort existing within the same collection of data.  Grouping together as much of the effort information as possible would make the data more self-documenting, because users have a bad habit of not reading documentation in my experience.
 
-## Author information
+## Agent information
 
-Steve Baskauf
+Submitted by Steve Baskauf, TDWG TAG, 2022-11-03
+
+When human-readable information is provided about authors of publications, recorders of occurrences, determiners of taxa, etc. we can provide important information by indicating the role played by each person and their affiliation. The order in which the people are listed may also be important. Thinking more broadly, we should probably consider these to be agents rather than people, since occurrences may be recorded by machines and determiners may be software agents. So there may also be a need to identify the type of agent (human, software, camera, etc.).
+
+For example, the prior TDWG standard "Floristic Regions of the World" (<http://www.tdwg.org/standards/104>) has an author, a translator, and an editor. That information is captured in tabular form several places ([here](https://github.com/tdwg/rs.tdwg.org/blob/master/docs/docs-authors.csv) and [here](https://github.com/tdwg/rs.tdwg.org/blob/master/docs-roles/docs-roles.csv)) and can be obtained as RDF [here](http://rs.tdwg.org/frw/doc/book.ttl) and [here](rs.tdwg.org/dump/docs-roles.ttl), but none of these forms are simply expressed or serialized in an easily consumable form. 
+
+Example data:
+
+```
+[
+    {
+        "@id": "http://viaf.org/viaf/19771885", 
+        "foaf:name": "Armen Leonovich Takhtajan", 
+        "role": "http://www.wikidata.org/entity/Q482980"
+    },
+    {
+        "@id": "http://viaf.org/viaf/91310738", 
+        "foaf:name": "Theodore J. Crovello", 
+        "role": "http://www.wikidata.org/entity/Q333634"
+    },
+    {
+        "@id": "http://viaf.org/viaf/61620062"", 
+        "foaf:name": "Arthur Cronquist", 
+        "role": "http://www.wikidata.org/entity/Q1607826"
+    }
+]
+```
+
+In another example, an organism may be identified by a machine-learning algorithm (e.g. image recognition in iNaturalist or bird song recognition in Merlin), with that identification verified at a later date by a human expert. How can the agent identity and type be grouped while also providing the ability to specify multiple values?
+
+Example data for <https://macaulaylibrary.org/asset/451198811> (sound recording docummenting an occurrence of Work-eating Warbler)
+
+```
+[
+    {
+        "agent_name": "Merlin",
+        "agent_type": "software"
+        "dwc:scientificName": "Helmitheros vermivorum",
+        "dwc:dateIdentified": "2022-05-20"
+    },
+    {
+        "agent_name": "Steven J. Baskauf",
+        "agent_type": "person"
+        "dwc:scientificName": "Helmitheros vermivorum",
+        "dwc:dateIdentified": "2022-05-21"
+    }
+]
+```
 
 ## Multiple life stages in museum sample
 
