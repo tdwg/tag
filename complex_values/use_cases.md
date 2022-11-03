@@ -56,7 +56,7 @@ Example data:
 
 In another example, an organism may be identified by a machine-learning algorithm (e.g. image recognition in iNaturalist or bird song recognition in Merlin), with that identification verified at a later date by a human expert. How can the agent identity and type be grouped while also providing the ability to specify multiple values?
 
-Example data for <https://macaulaylibrary.org/asset/451198811> (sound recording docummenting an occurrence of Work-eating Warbler)
+Example data for <https://macaulaylibrary.org/asset/451198811> (sound recording docummenting an occurrence of Worm-eating Warbler)
 
 ```
 [
