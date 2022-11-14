@@ -108,6 +108,34 @@ Example data:
 ]
 ```
 
+## Vernacular names
+
+Submitted by Ben Norton, TDWG TAG, at the 2022-11-07 working session
+
+Vernacular name record records include not only the name string itself, but also the language and if it's the primary one. When there is more than one vernacular name per species, how does one maintain the connection between the metadata statements about a particular vernacular name?
+
+Example data:
+
+```
+[
+    {
+        "dwc:vernacularName": "cougar",
+        "dc:language": "en",
+        "isPreferred": true
+    },
+    {
+        "dwc:vernacularName": "panther",
+        "dc:language": "en",
+        "isPreferred": false
+    },
+    {
+        "dwc:vernacularName": "puma",
+        "dc:language": "es",
+        "isPreferred": true
+    }
+]
+```
+
 ## Latimer Core
 
 Ben Norton
