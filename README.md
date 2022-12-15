@@ -4,7 +4,7 @@ The Technical Architecture Group is a Functional Subcommittee (FS) of the TDWG E
 
 The charter of the group can be viewed at <https://www.tdwg.org/about/committees/tag/>. Meeting notes can be viewed in the `meetings` directory of this repository.
 
-## TAG members - 2022
+## TAG members - 2023
 
 Following each name is affiliation and TDWG group represented or interest.
 
@@ -14,7 +14,8 @@ Ian Engelbrecht - Natural Science Collections Facility, South Africa. Collection
 
 David Fichtmueller - Botanic Garden and Botanical Museum (BGBM) Berlin. ABCD Schema. [D.Fichtmueller@bgbm.org](mailto:D.Fichtmueller@bgbm.org)
 
-Jeff Gerbracht - Cornell Lab of Ornithology. Taxon Concept Schema (TCS2) Task Group. [jeff.gerbracht@cornell.edu](mailto:jeff.gerbracht@cornell.edu)
+Kristen (Kit) Lewers - University of Colorado. Information science.
+[kristenlewers@colorado.edu](mailto:kristenlewers@colorado.edu)
 
 James Macklin - Agriculture and Agri-Food Canada. Past chair. [james.macklin@agr.gc.ca](mailto:james.macklin@agr.gc.ca)
 
@@ -37,4 +38,4 @@ Sarah Vincent - Natural History Museum, London. Latimer Core (Collection Descrip
 John Wieczorek - VertNet. Rauthiflor LLC. Darwin Core Maintenance Group. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)
 
 ----
-Revised 2022-09-11
+Revised 2022-12-15
