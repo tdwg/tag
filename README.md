@@ -15,7 +15,7 @@ Ian Engelbrecht - Natural Science Collections Facility, South Africa. Collection
 David Fichtmueller - Botanic Garden and Botanical Museum (BGBM) Berlin. ABCD Schema. [D.Fichtmueller@bgbm.org](mailto:D.Fichtmueller@bgbm.org)
 
 Kristen (Kit) Lewers - University of Colorado. Information science.
-[kristenlewers@colorado.edu](mailto:kristenlewers@colorado.edu)
+[kristen.lewers@colorado.edu](mailto:kristen.lewers@colorado.edu)
 
 James Macklin - Agriculture and Agri-Food Canada. Past chair. [james.macklin@agr.gc.ca](mailto:james.macklin@agr.gc.ca)
 
