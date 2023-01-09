@@ -113,9 +113,10 @@ with open('output_file.json', 'wt', encoding='utf-8') as file_object:
 ```
 Because the `json.loads()` and `json.dumps()` functions preserve the datatyping, values that were datatyped as boolean in the input JSON will remain datatyped as boolean in the output JSON.
 
-Now consider the following example that uses these data for input:
+Now consider the following Python example that uses these data for input:
 
 ![input data table](table.png)
+
 
 ```
 import pandas as pd
