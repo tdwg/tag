@@ -31,7 +31,7 @@ In delineated tabular data files (e.g. CSV and TSV), the controlled value string
 
 ### 2.1 Table schemas
 
-When a Table Schema is provided to describe the contents of the table, the type of the column SHOULD be described as boolean using the mechanism appropriate for the framework. For [Frictionless Data](https://frictionlessdata.io/), use `boolean` as the string indicator of the type property [[1]](#1) [[2]](#2). When using the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/), the specified datatype must be `xs:boolean` [[3]](#3). The cell values MUST be the controlled value strings. They MUST NOT be the alternate values allowed by the specification [[4]](#4).
+When a Table Schema is provided to describe the contents of the table, the type of the column SHOULD be described as boolean using the mechanism appropriate for the framework. For [Frictionless Data](https://frictionlessdata.io/), use `boolean` as the string indicator of the type property [[1]](#1) [[2]](#2). When using the [Model for Tabular Data and Metadata on the Web](http://www.w3.org/TR/tabular-data-model/), the specified datatype MUST be `xs:boolean` [[3]](#3). The cell values MUST be the controlled value strings. They MUST NOT be the alternate values allowed by the specification [[4]](#4).
 
 ## 3 JSON
 
@@ -91,11 +91,11 @@ Boolean values can be expressed as datatyped strings as shown in section 2, but 
 
 ## 6 Databases
 
-Boolean values are represented in a variety of ways in common database systems. For a summary, see Table 1A. in the Appendix of the Boolean Values Best Practices Reference document [[5]](#5). When the database system provides native support for a boolean data type, values MAY be typed in accordingly. However, if data are exported as delineated text tables, the values MUST be transformed to conform to the requirements given in Section 2 above. If the boolean data are exported as JSON or XML (e.g. via an API) they must conform to the datatyped serializations of Sections 3 and 4 respectively.
+Boolean values are represented in a variety of ways in common database systems. For a summary, see Table 1A. in the Appendix of the *Boolean Values Best Practices Reference* document [[5]](#5). When the database system provides native support for a boolean data type, values MAY be typed in accordingly. However, if data are exported as delineated text tables, the values MUST be transformed to conform to the requirements given in Section 2 above. If the boolean data are exported as JSON or XML (e.g. via an API) they must conform to the datatyped serializations of Sections 3 and 4 respectively.
 
 ## 7 Programming languages
 
-The mechanisms for typing booleans varies among programming languages and is summarized in table 2A. in the Appendix of the Boolean Values Best Practices Reference document [[5]](#5). From the perspective of interoperability, what happens within processing code is a black box that is not the concern of producers of data ingested by the code and consumers of data produced by the code as long as the input and output conforms to the serialization guidelines in Sections 2 through 5. However, programmers need to ensure that the datatyping requirements of those sections are preserved when data are read from or written to files.
+The mechanisms for typing booleans varies among programming languages and is summarized in Table 2A. in the Appendix of the *Boolean Values Best Practices Reference* document [[5]](#5). From the perspective of interoperability, what happens within processing code is a black box that is not the concern of producers of data ingested by the code and consumers of data produced by the code as long as the input and output conforms to the serialization guidelines in Sections 2 through 5. However, programmers need to ensure that the datatyping requirements of those sections are preserved when data are read from or written to files.
 
 In the following Python example, data are input and written as JSON.
 
@@ -132,7 +132,7 @@ with open('output_file.json', 'wt', encoding='utf-8') as file_object:
     file_object.write(output_text)
 ```
 
-In this case, all values were read from the input CSV as strings. So when the output JSON was generated, the boolean values were treated as strings. So the output JSON would be:
+In this case, all values are read from the input CSV as strings. So when the output JSON is generated, the boolean values will be treated as strings. So the (incorrect) output JSON will be:
 
 ```
 {
@@ -143,7 +143,7 @@ In this case, all values were read from the input CSV as strings. So when the ou
 }
 ```
 
-which expresses the boolean as the string "true" rather than as a boolean true value.
+which expresses the boolean as the string `"true"` rather than as a boolean `true` value.
 
 The point is that care must be taken to ensure that any necessary boolean datatyping is applied to the data upon output to comply with the requirements of Sections 2 though 5.
 
