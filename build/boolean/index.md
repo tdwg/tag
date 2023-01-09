@@ -1,16 +1,16 @@
 # Boolean Controlled Vocabulary
 
-**Title:** Boolean Controlled Vocabulary
+**Title:** TDWG Boolean Controlled Vocabulary
 
 **Namespace URI:** http://rs.tdwg.org/boolean/values/
 
 **Preferred namespace abbreviation:** boolean:
 
-**Date version issued:** put ratification date here
+**Date version issued:** put publication date here
 
-**Date created:** put ratification date here
+**Date created:** put publication date here
 
-**Part of TDWG Standard:** http://www.tdwg.org/standards/450
+**Part of TDWG Standard:** Not part of any standard
 
 **This version:** http://rs.tdwg.org/dwc/doc/boolean/iso-date-here
 
@@ -22,7 +22,7 @@
 
 **Creator:** TDWG Technical Architecture Group
 
-**Bibliographic citation:** Technical Architecture Group. 2022. Boolean Controlled Vocabulary. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/dwc/doc/boolean/>
+**Bibliographic citation:** Technical Architecture Group. 2023. Boolean Controlled Vocabulary. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/dwc/doc/boolean/>
 
 
 ## 1 Introduction
