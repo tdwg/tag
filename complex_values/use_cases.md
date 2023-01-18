@@ -146,7 +146,33 @@ From 2023-01-18 task group meeting
 
 Values for the terms `dwc:samplingPerformedBy` and `dwc:identifiedBy` may be people who also have ORCIDs. If there were a single value, then the IRI analogs (`dwciri:samplingPerformedBy` and `dwciri:identifiedBy`) could be used. However, multiple IRI values cannot be providided for the IRI analogs. Thus the "ID" terms might be used instead (`dwc:samplingPerformedByID` and `dwciri:identifiedBy`) since it is permissible to provide multiple values separated by a vertical bar. It would be preferable to use the IRI terms, but currently there is not a way to express multiple values outside of RDF (i.e. in a table).
 
-For reference, here's what an [ordered list looks like in JSON-LD](https://www.w3.org/TR/json-ld11/#lists):
+# JSON-LD
+
+Here's what [unordered multiple values look like in JSON-LD](https://www.w3.org/TR/json-ld11/#sets-and-lists):
+
+```
+{
+  "@context": {
+    "dwciri": "http://rs.tdwg.org/dwc/iri/"
+  },
+  "@id": "http://arctos.database.museum/guid/MSB:Mamm:233627",
+  "dwciri:identifiedBy": [
+    "https://orcid.org/0000-0003-4365-3135",
+    "https://orcid.org/0000-0003-1144-0290",
+    "https://orcid.org/0000-0003-1617-5895"
+  ]
+}
+```
+
+It serializes to RDF N-Quads as:
+
+```
+<http://arctos.database.museum/guid/MSB:Mamm:233627> <http://rs.tdwg.org/dwc/iri/identifiedBy> "https://orcid.org/0000-0003-1144-0290" .
+<http://arctos.database.museum/guid/MSB:Mamm:233627> <http://rs.tdwg.org/dwc/iri/identifiedBy> "https://orcid.org/0000-0003-1617-5895" .
+<http://arctos.database.museum/guid/MSB:Mamm:233627> <http://rs.tdwg.org/dwc/iri/identifiedBy> "https://orcid.org/0000-0003-4365-3135" .
+```
+
+Here's what an [ordered list looks like in JSON-LD](https://www.w3.org/TR/json-ld11/#lists):
 
 ```
 {
@@ -175,7 +201,6 @@ _:b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b2 .
 _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "https://orcid.org/0000-0003-1617-5895" .
 _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 ```
-
 
 # See also
 
