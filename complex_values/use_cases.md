@@ -144,7 +144,7 @@ Ben Norton
 
 From 2023-01-18 task group meeting
 
-Values for the terms `dwc:samplingPerformedBy` and `dwc:identifiedBy` may be people who also have ORCIDs. If there were a single value, then the IRI analogs (`dwciri:samplingPerformedBy` and `dwciri:identifiedBy`) could be used. However, multiple IRI values cannot be providided for the IRI analogs. Thus the "ID" terms might be used instead (`dwc:samplingPerformedByID` and `dwciri:identifiedBy`) since it is permissible to provide multiple values separated by a vertical bar. It would be preferable to use the IRI terms, but currently there is not a way to express multiple values outside of RDF (i.e. in a table).
+Values for the terms `dwc:samplingPerformedBy` and `dwc:identifiedBy` may be people who also have ORCIDs. If there were a single value, then the IRI analogs (`dwciri:samplingPerformedBy` and `dwciri:identifiedBy`) could be used. However, multiple IRI values cannot be providided for the IRI analogs. Thus the "ID" terms might be used instead (`dwc:samplingPerformedByID` and `dwciri:identifiedByID`) since it is permissible to provide multiple values separated by a vertical bar. It would be preferable to use the IRI terms, but currently there is not a way to express multiple values outside of RDF (i.e. in a table).
 
 # JSON-LD
 
