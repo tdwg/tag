@@ -140,9 +140,15 @@ Example data:
 
 Ben Norton
 
+## Humboldt Core (ID vs. IRI terms)
+
+From 2023-01-18 task group meeting
+
+Values for the terms `dwc:samplingPerformedBy` and `dwc:identifiedBy` may be people who also have ORCIDs. If there were a single value, then the IRI analogs (`dwciri:samplingPerformedBy` and `dwciri:identifiedBy`) could be used. However, multiple IRI values cannot be providided for the IRI analogs. Thus the "ID" terms might be used instead (`dwc:samplingPerformedByID` and `dwciri:identifiedBy`) since it is permissible to provide multiple values separated by a vertical bar. It would be preferable to use the IRI terms, but currently there is not a way to express multiple values outside of RDF (i.e. in a table).
+
 # See also
 
 [Examples of list values used for multiple Regions of Interest and Service Access Points](https://github.com/tdwg/ac/blob/master/roi-recipes.md) (discussed on the [existing precedents page](https://github.com/tdwg/tag/blob/master/complex_values/existing_precedents.md)).
 
 ----
-Revised 2022-11-03
+Revised 2023-01-18
