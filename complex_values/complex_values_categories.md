@@ -121,7 +121,7 @@
 
 ## Single blank node value
 
-![diagram of a single blank node resource](images/single_bn.png)
+![diagram of a single blank node resource value](images/single_bn.png)
 
 **RDF Turtle**
 
@@ -179,5 +179,105 @@
     "measurementValue": 12,
     "measurementUnit": "h"
   }
+}
+```
+
+## Multiple blank node values
+
+![diagram of a multiple blank node resource values](images/multiple_bn.png)
+
+**RDF Turtle**
+
+```
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix ex: <http://example.org/> .
+[] dwciri:vernacularName [
+    skosxl:literalForm "Mountain Lion";
+    dc:language "en";
+    ex:isPrimary true
+    ],
+    [
+    skosxl:literalForm "Cougar";
+    dc:language "en";
+    ex:isPrimary false
+    ].
+```
+
+**JSON-LD with CURIES**
+
+```
+{
+  "@context": {
+    "dwciri": "http://rs.tdwg.org/dwc/iri/",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "skosxl": "http://www.w3.org/2008/05/skos-xl#",
+    "ex": "http://example.org/"
+  },
+  "dwciri:vernacularName": [
+    {
+    "skosxl:literalForm": "Mountain Lion",
+    "dc:language": "en",
+    "ex:isPrimary": true
+    },
+    {
+    "skosxl:literalForm": "Cougar",
+    "dc:language": "en",
+    "ex:isPrimary": false
+    }
+  ]
+}
+```
+
+**Simplified JSON**
+
+```
+{
+  "vernacularName": [
+    {
+    "literalForm": "Mountain Lion",
+    "language": "en",
+    "isPrimary": true
+    },
+    {
+    "literalForm": "Cougar",
+    "language": "en",
+    "isPrimary": false
+    }
+  ]
+}
+```
+
+**JSON-LD without CURIES**
+
+```
+{
+  "@context": {
+    "vernacularName": {
+        "@id": "http://rs.tdwg.org/dwc/iri/vernacularName"
+    },
+    "literalForm": {
+        "@id": "http://www.w3.org/2008/05/skos-xl#literalForm"
+    },
+    "language": {
+        "@id": "http://purl.org/dc/elements/1.1/language"
+    },
+    "isPrimary": {
+        "@id": "http://example.org/isPrimary"
+    }
+  },
+  "vernacularName": [
+    {
+    "literalForm": "Mountain Lion",
+    "language": "en",
+    "isPrimary": true
+    },
+    {
+    "literalForm": "Cougar",
+    "language": "en",
+    "isPrimary": false
+    }
+  ]
 }
 ```
