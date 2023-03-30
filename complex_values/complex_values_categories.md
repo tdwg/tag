@@ -118,3 +118,66 @@
   ]
 }
 ```
+
+## Single blank node value
+
+![diagram of a single blank node resource](images/single_bn.png)
+
+**RDF Turtle**
+
+```
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+[] dwciri:eventDuration [
+    dwc:measurementValue 12;
+    dwc:measurementUnit "h"
+    ].
+```
+
+**JSON-LD with CURIES**
+
+```
+{
+  "@context": {
+    "dwciri": "http://rs.tdwg.org/dwc/iri/",
+    "dwc": "http://rs.tdwg.org/dwc/terms/"
+  },
+  "dwciri:eventDuration": {
+    "dwc:measurementValue": 12,
+    "dwc:measurementUnit": "h"
+  }
+}
+```
+
+**Simplified JSON**
+
+```
+{
+  "eventDuration": {
+    "measurementValue": 12,
+    "measurementUnit": "h"
+  }
+}
+```
+
+**JSON-LD without CURIES**
+
+```
+{
+  "@context": {
+    "eventDuration": {
+        "@id": "http://rs.tdwg.org/dwc/iri/eventDuration"
+    },
+    "measurementValue": {
+        "@id": "http://rs.tdwg.org/dwc/terms/measurementValue"
+    },
+    "measurementUnit": {
+        "@id": "http://rs.tdwg.org/dwc/terms/measurementUnit"
+    }
+  },
+  "eventDuration": {
+    "measurementValue": 12,
+    "measurementUnit": "h"
+  }
+}
+```
