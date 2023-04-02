@@ -146,6 +146,27 @@ From 2023-01-18 task group meeting
 
 Values for the terms `dwc:samplingPerformedBy` and `dwc:identifiedBy` may be people who also have ORCIDs. If there were a single value, then the IRI analogs (`dwciri:samplingPerformedBy` and `dwciri:identifiedBy`) could be used. However, multiple IRI values cannot be providided for the IRI analogs. Thus the "ID" terms might be used instead (`dwc:samplingPerformedByID` and `dwciri:identifiedByID`) since it is permissible to provide multiple values separated by a vertical bar. It would be preferable to use the IRI terms, but currently there is not a way to express multiple values outside of RDF (i.e. in a table).
 
+## Humboldt Core (target taxonomic scope and life stage scope)
+
+(from draft Implementation Experience Report)
+
+In the Antarctic GBIF/OBIS use case example, the Humboldt extension contains multiple fields that contain multiple paired values that extend a single Event. Example of paired values of eco:targetTaxonomicScope and eco:targetLifeStageScope is shown in tables below:
+
+**Event Core**
+
+| eventID | eventRemarks |
+| ------- | ------------ |
+| BROKE_WEST_RMT_006 | All life stages of Myctophidae were targeted \| Only larvae and juvenile of Macrouridae, Artedidraconidae, Channichthydae and Nototheniidae were targeted by the sampling protocol |
+
+**Humboldt Exetnsion**
+
+| eventID | targetTaxonomicScope | targetLifeStageScope |
+| ------- | -------------------- | -------------------- |
+| BROKE_WEST |  |  |
+| BROKE_WEST_RMT_006 | Myctophidae \| Macrouridae \| Artedidraconidae \| Channichthydae \| Nototheniidae | all \| larvae and juvenile \| larvae and juvenile \| larvae and juvenile \| larvae and juvenile |
+
+This limitation leads to difficulty in interpreting the data as the only way to know the paired information is based on the order in both fields, eco:targetTaxonomicScope and eco:targetLifeStageScope in this example.
+
 # JSON-LD
 
 Here's what [unordered multiple values look like in JSON-LD](https://www.w3.org/TR/json-ld11/#sets-and-lists):
@@ -207,4 +228,4 @@ _:b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/0
 [Examples of list values used for multiple Regions of Interest and Service Access Points](https://github.com/tdwg/ac/blob/master/roi-recipes.md) (discussed on the [existing precedents page](https://github.com/tdwg/tag/blob/master/complex_values/existing_precedents.md)).
 
 ----
-Revised 2023-01-18
+Revised 2023-04-02
