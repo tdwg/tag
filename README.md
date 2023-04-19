@@ -25,7 +25,7 @@ Ben Norton (deputy chair) - North Carolina Museum of Natural Sciences - TDWG Bio
 
 Rod Page - University of Glasgow. Wikidata and Linked Data applications. [rdmpage@gmail.com](mailto:rdmpage@gmail.com)
 
-Camila Andrea Plata Corredor - Sistema de Información sobre Biodiversidad de Colombia, Instituto de Investigación de Recursos Biológicos Alexander von Humboldt. Plinian Core Task Group. [cplata@humboldt.org.co](mailto:cplata@humboldt.org.co)
+Camila Andrea Plata Corredor - Catalogue of Life. Plinian Core Task Group. [camila.plata@sp2000.org](mailto:camila.plata@sp2000.org)
 
 Tim Robertson - Global Biodiversity Information Facility (GBIF). TDWG Infrastructure Sub Committee Chair and member of the Darwin Core Maintenance Group. [trobertson@gbif.org](mailto:trobertson@gbif.org)
 
