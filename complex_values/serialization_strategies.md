@@ -67,7 +67,7 @@ Here is a fanciful example illustrating all of these approaches:
 
 | coordinateUncertaintyInMeters | verbatimDepth | sampleSizeValue | sampleSizeUnit | dynamicProperties |
 | ------------- | ----------- | ---------------- | ----------- | ---------------- |
-| 1000 | 15 m | 5 | metre | {"bodyLengthValue":26, "bodyLengthUnit":"cm"} |
+| 1000 | 15 m | 5 | metre | `{"bodyLengthValue":26, "bodyLengthUnit":"cm"}` |
 
 Problems:
 - How do we handle cases where the best practice is to use a controlled value for one of the components, such as units? It would be best to use an IRI to a standard term, which brings up the same IRI usues as in the previous example.
@@ -84,6 +84,19 @@ One possible solution would be to use structured data (a JSON array containing a
 | eBird complete checklist | `[{"value":2568,"unit":"meters"},{"value":3.6,"unit":"hours"}]` |
 
 This approach would provide the necessary structure to remove the ambiguity, but would be difficult to implement by a human typing into a spreadsheet.
+
+Another alternative would be to require linking to another table using an "ID" term having multiple values:
+
+| protocolNames | samplingEffortID |
+| ---- | ------------- |
+| eBird complete checklist | eb493c5d-57f2-4fa5-97ec-76480111b276 \| 5d6cbdb7-3c7a-4aa1-8660-6c68b478641e |
+
+| samplingEffortID | unit | value |
+| ---- | ----- | ----- |
+| eb493c5d-57f2-4fa5-97ec-76480111b276 | 2568 | meters |
+| 5d6cbdb7-3c7a-4aa1-8660-6c68b478641e | 3.6 | hours |
+
+This might require the creation of a measurement class with unit and value terms. I'm also uncertain about the wisdom of providing multiple values for an ID term by this mechanism.
 
 ## Vanilla JSON
 
