@@ -98,7 +98,7 @@ Another alternative would be to require linking to another table using an "ID" t
 
 This might require the creation of a measurement class with unit and value terms. I'm also uncertain about the wisdom of providing multiple values for an ID term by this mechanism.
 
-## Vanilla JSON
+# Vanilla JSON
 
 The simplest interpretation of JSON is that JSON objects represent instances (or individuals) of a class, that the names (i.e. keys) represent properties appropriate for instances of that class, and the values in the name:value pairs represent values of the name property for the individual represented by the object (the subject resource). To represent many instances, multiple JSON objects are placed within an array.
 
@@ -202,3 +202,9 @@ But for multiple values, this structure makes more sense:
 Conceptually, these approaches differ significantly. In the first example, the sampling effort values are considered to be direct properties of the subject resource. In the second example, there is an implied measurement class, with `samplingEffort` linking from the subject resource to instances of that class, and the `value` and `unit` properties linking from the measurement class instances to the values. 
 
 The [Complex values categories](https://github.com/tdwg/tag/blob/master/complex_values/complex_values_categories.md) document provides more details on the different conceptual models implied by different JSON structures. 
+
+# Invariance of structure and semantics upon transformation between serializations
+
+In the introduction, it was noted that it would be desirable to be able to translate any dataset from one serialization to another without any loss of structure (i.e. graph topology) or semantics (property meaning). If the JSON-LD/Linked Data Context approach were followed, it should be possible to translate vanilla JSON to RDF if specific structuring rules were followed and if an `@context` link to a context file were provided. 
+
+The translation from tabular data to JSON or RDF is more complex for several reasons. For one, the several *ad hoc* mechanisms for expressing complex values currently in use in table-based TDWG vocabularies were not designed with facilitating this kind of translation. Another reason is that tabular biodiversity data is often "flattened" so that properties appropriate for different classes are used in a single table. That makes it difficult to interpret how such a table should be serialized in the more structured JSON and RDF formats. However, with some thought it might be possible to define a translation algorithm if specific guidelines were followed for the use of complex valued properties in the tables.
