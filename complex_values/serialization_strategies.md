@@ -71,7 +71,7 @@ Here is a fanciful example illustrating all of these approaches:
 
 Problems:
 - How do we handle cases where the best practice is to use a controlled value for one of the components, such as units? It would be best to use an IRI to a standard term, which brings up the same IRI usues as in the previous example.
-- What happens when there are multiple values for a property that requires two components to describe it? The Humboldt Extension has such a case: `eco:samplingEffortValue` and `eco:samplingEffortUnit`. In most installations, there would only be a single value for sampling effort. But in the case of eBird, multiple measures of sampling effort are recorded. Using the "space pipe space" approach is problematic since it is unclear which of the multiple values for one property are associated with which of the multiple values for another. Example:
+- What happens when there are multiple values for a property that requires two components to describe it? The Humboldt Extension has such a case: `eco:samplingEffortValue` and `eco:samplingEffortUnit`. (See [this issue where the Humboldt Task Group has requested advice](https://github.com/tdwg/tag/issues/43).) In most installations, there would only be a single value for sampling effort. But in the case of eBird, multiple measures of sampling effort are recorded. Using the "space pipe space" approach is problematic since it is unclear which of the multiple values for one property are associated with which of the multiple values for another. Example:
 
 | protocolNames | samplingEffortValue | samplingEffortUnit |
 | ---- | ------------- | ----------- |
@@ -97,6 +97,8 @@ Another alternative would be to require linking to another table using an "ID" t
 | 5d6cbdb7-3c7a-4aa1-8660-6c68b478641e | 3.6 | h |
 
 This might require the creation of a measurement class with unit and value terms. I'm also uncertain about the wisdom of providing multiple values for an ID term by this mechanism.
+
+See the [Appendix](#appendix) for a more complex example from the Humboldt Extension with the same problem.
 
 # Vanilla JSON
 
@@ -208,3 +210,52 @@ The [Complex values categories](https://github.com/tdwg/tag/blob/master/complex_
 In the introduction, it was noted that it would be desirable to be able to translate any dataset from one serialization to another without any loss of structure (i.e. graph topology) or semantics (property meaning). If the JSON-LD/Linked Data Context approach were followed, it should be possible to translate vanilla JSON to RDF if specific structuring rules were followed and if an `@context` link to a context file were provided. 
 
 The translation from tabular data to JSON or RDF is more complex for several reasons. For one, the several *ad hoc* mechanisms for expressing complex values currently in use in table-based TDWG vocabularies were not designed with facilitating this kind of translation. Another reason is that tabular biodiversity data is often "flattened" so that properties appropriate for different classes are used in a single table. That makes it difficult to interpret how such a table should be serialized in the more structured JSON and RDF formats. However, with some thought it might be possible to define a translation algorithm if specific guidelines were followed for the use of complex valued properties in the tables.
+
+
+# Appendix
+
+Here is the other example raised in [Issue 43](https://github.com/tdwg/tag/issues/43):
+
+eventID | targetTaxonomicScope | targetLifeStageScope
+-- | -- | --
+BROKE_WEST_RMT_006 | Myctophidae \| Macrouridae \| Artedidraconidae \| Channichthydae \| Nototheniidae | all \| larvae and juvenile \| larvae and juvenile \| larvae and juvenile \| larvae and juvenile
+
+This reads, in BROKE_WEST_RMT_006 Event, the targets are:
+
+- all life stages of Myctophidae 
+- only larvae and juvenile of Macrouridae  
+- only larvae and juvenile of Artedidraconidae
+- only larvae and juvenile of Channichthydae
+- only larvae and juvenile of Nototheniidae
+
+In JSON, this could be represented as the following, although the term names are different from what is proposed:
+
+```
+{
+  "eventID": "BROKE_WEST_RMT_006",
+  "targetScope": [
+    {
+      "taxonomic": "Myctophidae",
+      "lifeStage": "all"
+    },
+    {
+      "taxonomic": "Macrouridae",
+      "lifeStage": "larvae and juvenile"
+    },
+    {
+      "taxonomic": "Artedidraconidae",
+      "lifeStage": "larvae and juvenile"
+    },
+    {
+      "taxonomic": "Channichthydae",
+      "lifeStage": "larvae and juvenile"
+    },
+    {
+      "taxonomic": "Nototheniidae",
+      "lifeStage": "larvae and juvenile"
+    }
+  ]
+}
+```
+
+This would be a large and complex amount of data to put in a single table cell.
