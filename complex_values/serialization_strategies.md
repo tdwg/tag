@@ -145,6 +145,10 @@ Problems:
 - How do we differentiate between `dwc:recordedBy` and `dwciri:recordedBy`? Require namespace abbreviations for all names (keys)? Require them only for some (e.g. for `dwciri:` but not `dwc:`)? This problem is related to an overall issue with making clear the semantics of the names (keys) used to represent properties in JSON objects.
 - How do we know that the values are IRIs and not untyped strings?
 
+Part of the solution to these problems may lie in using JSON-LD to establish a Linked Data Context that aliases the IRIs for property terms as strings. See [the IIIF Presentation API 3.0 specification](https://iiif.io/api/presentation/3.0/#46-linked-data-context-and-extensions) for an example of this approach. For a demonstration of how contexts could be constructed, see the [Complex values categories](https://github.com/tdwg/tag/blob/master/complex_values/complex_values_categories.md) document.
+
+Because Darwin Core uses the dual namespace approach (`dwc:` and `dwciri:`) to distingish between IRI- and non-IRI-valued properties, there would be term collisions if the namespace abbreviations were simply dropped to form the alias strings. This situation does not arise in Audiovisual Core since the IRI and non-IRI terms have different local names within the same namespace.
+
 2\. In the section on tabular data, four approaches were listed for dealing with values having two components, such as values with units. Since hierarchical structuring is inherent in JSON, the last approach makes the most sense. It could be represented like this:
 
 ```
@@ -154,26 +158,32 @@ Problems:
     "bodyLengthUnit": "cm"
     }
 }
+```
 
 However, for compatibility with other serializations, the two-term solution is likely to be common:
 
+```
 {
   "sampleSizeValue": 5,
   "sampleSizeUnit": "metre"
 }
+```
 
 Problems:
 - Controlled values for components (same as in the tablular data case)
 - What happens when there are multiple values for a property that requires two components to describe it? The sampling effort example described in the tabular data section above could look like this for a single value:
 
+```
 {
   "protocolNames": "eBird complete checklist",
   "samplingEffortValue": 2568,
   "samplingEffortUnit": "m"
 }
+```
 
 But for multiple values, this structure makes more sense:
 
+```
 {
   "protocolNames": "eBird complete checklist",
   "samplingEffort": [
@@ -187,5 +197,8 @@ But for multiple values, this structure makes more sense:
     }
   ]
 }
+```
 
-Conceptually, these approaches differ significantly. In the first example, the sampling effort values are considered to be direct properties of the subject resource. In the second example, there is an implied measurement class, with `samplingEffort` linking from the subject resource to instances of that class, and the `value` and `unit` properties linking from the measurement class instances to the values. See the [Complex values categories](https://github.com/tdwg/tag/blob/master/complex_values/complex_values_categories.md) document for more on this.
+Conceptually, these approaches differ significantly. In the first example, the sampling effort values are considered to be direct properties of the subject resource. In the second example, there is an implied measurement class, with `samplingEffort` linking from the subject resource to instances of that class, and the `value` and `unit` properties linking from the measurement class instances to the values. 
+
+The [Complex values categories](https://github.com/tdwg/tag/blob/master/complex_values/complex_values_categories.md) document provides more details on the different conceptual models implied by different JSON structures. 
