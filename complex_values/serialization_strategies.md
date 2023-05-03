@@ -75,13 +75,13 @@ Problems:
 
 | protocolNames | samplingEffortValue | samplingEffortUnit |
 | ---- | ------------- | ----------- |
-| eBird complete checklist | 2568 \| 3.6 | meters \| hours |
+| eBird complete checklist | 2568 \| 3.6 | meter \| hour |
 
 One possible solution would be to use structured data (a JSON array containing a JSON object for each value) for a single property:
 
 | protocolNames | samplingEffort |
 | ---- | ------------- |
-| eBird complete checklist | `[{"value":2568,"unit":"meters"},{"value":3.6,"unit":"hours"}]` |
+| eBird complete checklist | `[{"value":2568,"unit":"mf"},{"value":3.6,"unit":"h"}]` |
 
 This approach would provide the necessary structure to remove the ambiguity, but would be difficult to implement by a human typing into a spreadsheet.
 
@@ -93,8 +93,8 @@ Another alternative would be to require linking to another table using an "ID" t
 
 | samplingEffortID | unit | value |
 | ---- | ----- | ----- |
-| eb493c5d-57f2-4fa5-97ec-76480111b276 | 2568 | meters |
-| 5d6cbdb7-3c7a-4aa1-8660-6c68b478641e | 3.6 | hours |
+| eb493c5d-57f2-4fa5-97ec-76480111b276 | 2568 | m |
+| 5d6cbdb7-3c7a-4aa1-8660-6c68b478641e | 3.6 | h |
 
 This might require the creation of a measurement class with unit and value terms. I'm also uncertain about the wisdom of providing multiple values for an ID term by this mechanism.
 
@@ -142,15 +142,50 @@ How do we handle IRI values of `dwciri:` terms? Here is an example:
 ```
 
 Problems:
-- How do we differentiate between `dwc:recordedBy` and `dwciri:recordedBy`? Require namespace abbreviations for all names (keys)? Require them only for some (e.g. for `dwciri:` but not `dwc:`)?
+- How do we differentiate between `dwc:recordedBy` and `dwciri:recordedBy`? Require namespace abbreviations for all names (keys)? Require them only for some (e.g. for `dwciri:` but not `dwc:`)? This problem is related to an overall issue with making clear the semantics of the names (keys) used to represent properties in JSON objects.
 - How do we know that the values are IRIs and not untyped strings?
 
-2\. 
+2\. In the section on tabular data, four approaches were listed for dealing with values having two components, such as values with units. Since hierarchical structuring is inherent in JSON, the last approach makes the most sense. It could be represented like this:
 
+```
+{
+  "dynamicProperties": {
+    "bodyLengthValue": 26,
+    "bodyLengthUnit": "cm"
+    }
+}
 
-----------
+However, for compatibility with other serializations, the two-term solution is likely to be common:
 
-eBird has multiple values for
-eco:samplingEffortValue and eco:samplingEffortUnit
+{
+  "sampleSizeValue": 5,
+  "sampleSizeUnit": "metre"
+}
 
-targetTaxonomicScope etc.
+Problems:
+- Controlled values for components (same as in the tablular data case)
+- What happens when there are multiple values for a property that requires two components to describe it? The sampling effort example described in the tabular data section above could look like this for a single value:
+
+{
+  "protocolNames": "eBird complete checklist",
+  "samplingEffortValue": 2568,
+  "samplingEffortUnit": "m"
+}
+
+But for multiple values, this structure makes more sense:
+
+{
+  "protocolNames": "eBird complete checklist",
+  "samplingEffort": [
+    {
+      "value":2568,
+      "unit":"m"
+    },
+    {
+      "value":3.6,
+      "unit":"h"
+    }
+  ]
+}
+
+Conceptually, these approaches differ significantly. In the first example, the sampling effort values are considered to be direct properties of the subject resource. In the second example, there is an implied measurement class, with `samplingEffort` linking from the subject resource to instances of that class, and the `value` and `unit` properties linking from the measurement class instances to the values. See the [Complex values categories](https://github.com/tdwg/tag/blob/master/complex_values/complex_values_categories.md) document for more on this.
