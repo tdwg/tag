@@ -16,7 +16,7 @@ Unfortunately, the most commonly used serialization (tabular data) is potentiall
 
 Ideally, data could be translated between any of these serializations without loss of semantics or structure. In other words, data provided in any of these serialization types should result in the same abstract graph of property relationships among entities. 
 
-## Purpose
+## Purpose of this document
 
 The purpose of this document is to describe the issues related to serializing complex values of TDWG properties for the two least self-descriptive serialization types: tabular data and JSON served by APIs. 
 
@@ -66,7 +66,7 @@ Problems:
 Here is a fanciful example illustrating all of these approaches:
 
 | coordinateUncertaintyInMeters | verbatimDepth | sampleSizeValue | sampleSizeUnit | dynamicProperties |
-| ------------- | ----------- | ---------------- |
+| ------------- | ----------- | ---------------- | ----------- | ---------------- |
 | 1000 | 15 m | 5 | metre | {"bodyLengthValue":26, "bodyLengthUnit":"cm"} |
 
 Problems:
@@ -80,7 +80,7 @@ Problems:
 One possible solution would be to use structured data (a JSON array containing a JSON object for each value) for a single property:
 
 | protocolNames | samplingEffort |
-| ---- | ------------- | ----------- |
+| ---- | ------------- |
 | eBird complete checklist | `[{"value":2568,"unit":"meters"},{"value":3.6,"unit":"hours"}]` |
 
 This approach would provide the necessary structure to remove the ambiguity, but would be difficult to implement by a human typing into a spreadsheet.
