@@ -37,13 +37,13 @@ The simplest interpretation of tabular data is that a table represents a class, 
 
 ## Issues
 
-In the example above, each property has only a single value. However, in many cases multiple values are appropriate for a property. The current convention in TDWG is to use "space pipe space" (` | `) to separate the values within a cell. Here's an example:
+1\. In the example above, each property has only a single value. However, in many cases multiple values are appropriate for a property. The current convention in TDWG is to use "space pipe space" (` | `) to separate the values within a cell. Here's an example:
 
 | recordedBy | preparations | disposition |
 | ------------- | ----------- | ---------------- |
 | Achmed Khan | skull \| skin | in collection |
 
-1\. Is it appropriate to use the "space pipe space" convention for multiple IRI values for `dwciri:` terms. Here is an example:
+Is it appropriate to use the "space pipe space" convention for multiple IRI values for `dwciri:` terms. Here is an example:
 
 | dwciri:recordedBy | preparations | disposition |
 | ------------- | ----------- | ---------------- |
@@ -55,8 +55,35 @@ Problems:
 
 | dwciri:recordedBy | preparations | disposition |
 | ------------- | ----------- | ---------------- |
-| \["https://orcid.org/0000-0003-1715-4850", "https://orcid.org/0000-0003-4365-3135"\] | herbarium sheet | in collection |
+| `["https://orcid.org/0000-0003-1715-4850", "https://orcid.org/0000-0003-4365-3135"]` | herbarium sheet | in collection |
 
+2\. In some cases, the value of a property requires two components to fully describe it. A common example is values with units. We see a variety of approaches to this issue:
+- define a single term so that it may only use a particular unit. Example: `dwc:coordinateUncertaintyInMeters`.
+- define a single term whose string value includes the unit. Example: `dwc:verbatimDepth`.
+- define two terms: one for the term and one for the unit. An example is `dwc:sampleSizeValue` and `dwc:sampleSizeUnit`.
+- define a single term whose value contains structured data. `dwc:dynamicProperties` is an example that suggests JSON as the mechanism for structuring, although the existing examples don't show it being used with values and units.
+
+Here is a fanciful example illustrating all of these approaches:
+
+| coordinateUncertaintyInMeters | verbatimDepth | sampleSizeValue | sampleSizeUnit | dynamicProperties |
+| ------------- | ----------- | ---------------- |
+| 1000 | 15 m | 5 | metre | {"bodyLengthValue":26, "bodyLengthUnit":"cm"} |
+
+Problems:
+- How do we handle cases where the best practice is to use a controlled value for one of the components, such as units? It would be best to use an IRI to a standard term, which brings up the same IRI usues as in the previous example.
+- What happens when there are multiple values for a property that requires two components to describe it? The Humboldt Extension has such a case: `eco:samplingEffortValue` and `eco:samplingEffortUnit`. In most installations, there would only be a single value for sampling effort. But in the case of eBird, multiple measures of sampling effort are recorded. Using the "space pipe space" approach is problematic since it is unclear which of the multiple values for one property are associated with which of the multiple values for another. Example:
+
+| protocolNames | samplingEffortValue | samplingEffortUnit |
+| ---- | ------------- | ----------- |
+| eBird complete checklist | 2568 \| 3.6 | meters \| hours |
+
+One possible solution would be to use structured data (a JSON array containing a JSON object for each value) for a single property:
+
+| protocolNames | samplingEffort |
+| ---- | ------------- | ----------- |
+| eBird complete checklist | `[{"value":2568,"unit":"meters"},{"value":3.6,"unit":"hours"}]` |
+
+This approach would provide the necessary structure to remove the ambiguity, but would be difficult to implement by a human typing into a spreadsheet.
 
 ## Vanilla JSON
 
@@ -75,7 +102,7 @@ The simplest interpretation of JSON is that JSON objects represent instances (or
 
 ## Issues
 
-When multiple values are present in JSON, they can be represented by an array. Here's an example:
+1\. When multiple values are present in JSON, they can be represented by an array. Here's an example:
 
 ```
   {
@@ -88,6 +115,24 @@ When multiple values are present in JSON, they can be represented by an array. H
   }
 ```
 
+How do we handle IRI values of `dwciri:` terms? Here is an example:
+
+```
+  {
+  "dwciri:recordedBy": [
+    "https://orcid.org/0000-0003-1715-4850",
+    "https://orcid.org/0000-0003-4365-3135"
+    ],
+  "preparations": "herbarium sheet",
+  "disposition": "in collection"
+  }
+```
+
+Problems:
+- How do we differentiate between `dwc:recordedBy` and `dwciri:recordedBy`? Require namespace abbreviations for all names (keys)? Require them only for some (e.g. for `dwciri:` but not `dwc:`)?
+- How do we know that the values are IRIs and not untyped strings?
+
+2\. 
 
 
 ----------
