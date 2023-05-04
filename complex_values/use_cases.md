@@ -112,12 +112,27 @@ Example data:
 
 Submitted by Ben Norton, TDWG TAG, at the 2022-11-07 working session
 
-Vernacular name record records include not only the name string itself, but also the language and if it's the primary one. When there is more than one vernacular name per species, how does one maintain the connection between the metadata statements about a particular vernacular name?
+**Simple JSON array**
+
+Allows for multiple values.
+
+"verbatimNames": [
+	"Cougar",
+	"Mountain Lion",
+	"Catamount",
+	"Panther",
+	"Florida Panther",
+	"Puma"
+]
+
+**JSON array of JSON objects**
+
+Vernacular name record records include not only the name string itself, but also the language and whether it's the primary one or not. When there is more than one vernacular name per species, how does one maintain the connection between the metadata statements about a particular vernacular name?
 
 Example data:
 
 ```
-[
+"hasVernacularName": [
     {
         "dwc:vernacularName": "cougar",
         "dc:language": "en",
@@ -136,9 +151,7 @@ Example data:
 ]
 ```
 
-## Latimer Core
-
-Ben Norton
+This use case assumes a VerbatimName class that is the value of the `hasVernacularName` property and which is the subject resource of the `dwc:vernacularName`, `dc:language`, and `isPreferred` properties. 
 
 ## Humboldt Core (ID vs. IRI terms)
 
@@ -166,6 +179,7 @@ In the Antarctic GBIF/OBIS use case example, the Humboldt extension contains mul
 | BROKE_WEST_RMT_006 | Myctophidae \| Macrouridae \| Artedidraconidae \| Channichthydae \| Nototheniidae | all \| larvae and juvenile \| larvae and juvenile \| larvae and juvenile \| larvae and juvenile |
 
 This limitation leads to difficulty in interpreting the data as the only way to know the paired information is based on the order in both fields, eco:targetTaxonomicScope and eco:targetLifeStageScope in this example.
+
 
 # JSON-LD
 
