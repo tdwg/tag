@@ -70,18 +70,18 @@ Here is a fanciful example illustrating all of these approaches:
 | 1000 | 15 m | 5 | metre | `{"bodyLengthValue":26, "bodyLengthUnit":"cm"}` |
 
 Problems:
-- How do we handle cases where the best practice is to use a controlled value for one of the components, such as units? It would be best to use an IRI to a standard term, which brings up the same IRI usues as in the previous example.
+- How do we handle cases where the best practice is to use a controlled value for one of the components, such as units? It would be best to use an IRI to a standard term, which brings up the same IRI issues as in the previous example.
 - What happens when there are multiple values for a property that requires two components to describe it? The Humboldt Extension has such a case: `eco:samplingEffortValue` and `eco:samplingEffortUnit`. (See [this issue where the Humboldt Task Group has requested advice](https://github.com/tdwg/tag/issues/43).) In most installations, there would only be a single value for sampling effort. But in the case of eBird, multiple measures of sampling effort are recorded. Using the "space pipe space" approach is problematic since it is unclear which of the multiple values for one property are associated with which of the multiple values for another. Example:
 
 | protocolNames | samplingEffortValue | samplingEffortUnit |
 | ---- | ------------- | ----------- |
-| eBird complete checklist | 2568 \| 3.6 | meter \| hour |
+| eBird complete checklist | 2568 \| 3.6 | m \| h |
 
 One possible solution would be to use structured data (a JSON array containing a JSON object for each value) for a single property:
 
 | protocolNames | samplingEffort |
 | ---- | ------------- |
-| eBird complete checklist | `[{"value":2568,"unit":"mf"},{"value":3.6,"unit":"h"}]` |
+| eBird complete checklist | `[{"value":2568,"unit":"m"},{"value":3.6,"unit":"h"}]` |
 
 This approach would provide the necessary structure to remove the ambiguity, but would be difficult to implement by a human typing into a spreadsheet.
 
@@ -96,13 +96,13 @@ Another alternative would be to require linking to another table using an "ID" t
 | eb493c5d-57f2-4fa5-97ec-76480111b276 | 2568 | m |
 | 5d6cbdb7-3c7a-4aa1-8660-6c68b478641e | 3.6 | h |
 
-This might require the creation of a measurement class with unit and value terms. I'm also uncertain about the wisdom of providing multiple values for an ID term by this mechanism.
+This might require the creation of a measurement class with unit and value terms. I'm also uncertain about the wisdom of providing multiple values for an ID term as shown in this example.
 
-See the [Appendix](#appendix) for a more complex example from the Humboldt Extension with the same problem.
+See the [Appendix](#appendix) below for a more complex example from the Humboldt Extension that has the same problem.
 
-# Vanilla JSON
+# Vanilla JSON (not JSON-LD)
 
-The simplest interpretation of JSON is that JSON objects represent instances (or individuals) of a class, that the names (i.e. keys) represent properties appropriate for instances of that class, and the values in the name:value pairs represent values of the name property for the individual represented by the object (the subject resource). To represent many instances, multiple JSON objects are placed within an array.
+The simplest interpretation of JSON is that JSON objects represent instances (or individuals) of a class, that the names (i.e. keys) represent properties appropriate for instances of that class, and the values in the name:value pairs represent values of the property for the individual represented by the object (the subject resource). To represent many instances, multiple JSON objects are placed within an array.
 
 ```
 [
@@ -149,15 +149,15 @@ Problems:
 
 Part of the solution to these problems may lie in using JSON-LD to establish a Linked Data Context that aliases the IRIs for property terms as strings. See [the IIIF Presentation API 3.0 specification](https://iiif.io/api/presentation/3.0/#46-linked-data-context-and-extensions) for an example of this approach. For a demonstration of how contexts could be constructed, see the [Complex values categories](https://github.com/tdwg/tag/blob/master/complex_values/complex_values_categories.md) document.
 
-Because Darwin Core uses the dual namespace approach (`dwc:` and `dwciri:`) to distingish between IRI- and non-IRI-valued properties, there would be term collisions if the namespace abbreviations were simply dropped to form the alias strings. This situation does not arise in Audiovisual Core since the IRI and non-IRI terms have different local names within the same namespace.
+Because Darwin Core uses the dual namespace approach (`dwc:` and `dwciri:`) to distingish between IRI- and non-IRI-valued properties, there would be term collisions if the namespace abbreviations were simply dropped to form the alias strings. This situation does not arise in Audiovisual Core since the IRI and non-IRI terms have different local names within the same namespace (e.g. `ac:provider` for IRI values and `ac:providerLiteral` for non-IRI values).
 
-2\. In the section on tabular data, four approaches were listed for dealing with values having two components, such as values with units. Since hierarchical structuring is inherent in JSON, the last approach makes the most sense. It could be represented like this:
+2\. In the section on tabular data, four approaches were listed for dealing with values having two or more components, such as values with units. Since hierarchical structuring is inherent in JSON, the last approach makes the most sense. It could be represented like this:
 
 ```
 {
-  "dynamicProperties": {
-    "bodyLengthValue": 26,
-    "bodyLengthUnit": "cm"
+  "sampleSize": {
+    "value": 26,
+    "unit": "cm"
     }
 }
 ```
@@ -228,7 +228,7 @@ This reads, in BROKE_WEST_RMT_006 Event, the targets are:
 - only larvae and juvenile of Channichthydae
 - only larvae and juvenile of Nototheniidae
 
-In JSON, this could be represented as the following, although the term names are different from what is proposed:
+In JSON, this could be represented as the following, although the term names are different from what is currently being proposed in the Humboldt Extension:
 
 ```
 {
