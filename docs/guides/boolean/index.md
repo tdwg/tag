@@ -12,7 +12,7 @@
 
 **Creator:** TDWG Technical Architecture Group (TAG)
 
-**Bibliographic citation:** Technical Architecture Group. 2023. Best practices for serializing booleans. Biodiversity Information Standards (TDWG). https://github.com/tdwg/tag/blob/master/booleans/boolean-best-practices.md
+**Bibliographic citation:** Technical Architecture Group. 2023. Best practices for serializing booleans. Biodiversity Information Standards (TDWG). https://tdwg.github.io/tag/guides/boolean/
 
 ## 1 Introduction
 
@@ -20,7 +20,7 @@ Value terms in TDWG controlled vocabularies are typically modeled as SKOS Concep
 
 The metadata of a TDWG controlled value term provides two standard ways to denote that concept: a term IRI, which serves as a globally unique identifier and a controlled value string, which indicates how the concept should be designated in text-based systems such as CSV files or database tables. 
 
-This document describes how the concepts of the [TDWG Boolean Controlled Vocabulary](https://github.com/tdwg/tag/blob/master/build/boolean/index.md) can be represented in various serializations.  
+This document describes how the concepts of the [TDWG Boolean Controlled Vocabulary](https://tdwg.github.io/tag/boolean/) can be represented in various serializations.  
 
 ### 1.1 RFC 2119 key words
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
