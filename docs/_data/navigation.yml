@@ -9,6 +9,6 @@
 - text: Guides
   menu:
   - text: Best practices for booleans
-    href: /terms/
+    href: /guites/boolean/
 - text: GitHub
   href: https://github.com/tdwg/tag
