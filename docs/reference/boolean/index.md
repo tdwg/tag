@@ -4,16 +4,18 @@
 
 **Date Modified:** 2023-03-06
 
+**Version**: 20230306.1
+
 **Part of TDWG Standard:** Not part of any standard
 
 **Abstract:** The following is a summary of best practices for the use
 of boolean values.
 
--   Use an enumerated domain containing two and only two values, true and false.
+-   Use an enumerated domain containing two and only two values, `true` and `false`.
 
 -   Domain values should be lowercase, non-localized, and not abbreviated
 
-**Contributors:** Ben Norton (author), Steve Baskauf (reviewer), Tim
+**Contributors:** Ben Norton (author, Head of Technology and Collections Data Curator, NCMNS, Contact: [ben.norton@naturalsciences.org](mailto:ben.norton@naturalsciences.org), Steve Baskauf (reviewer), Tim
 Robertson (reviewer), John Wieczorek (reviewer)
 
 **Creator:** TDWG Technical Architecture Group (TAG)
@@ -43,7 +45,7 @@ In modern computing, the boolean data type is a primitive type (a type
 not derived from another) that represents the truth of an expression
 using two numerical values, 0 or 1. Handling boolean values, including
 the enumerated domain values and syntax, varies between programming
-languages and database technologies. Tables 1-3 in Appendix I summarize
+languages and database technologies. [Tables 1-3 in Appendix 1](#appendix-1-boolean-support-and-compatibility) summarize
 support for the boolean data type for many popular programming languages
 and database vendors. In contrast to programming languages, all database
 technologies do not provide native support for the boolean data type
@@ -77,8 +79,7 @@ that belong to the boolean data type are restricted to the boolean
 enumerated domain. Values in boolean enumerated domains are not limited
 to specific character strings. Rather, they are restricted to one or
 more two-state values. Numeric boolean enumerated domains (or numeric
-boolean domains) are a special type that only contains the numbers 0 and
-1. In tables 1-3, boolean enumerated domains are denoted with square
+boolean domains) are a special type that only contains the numbers 0 and 1. In Tables 1-3, boolean enumerated domains are denoted with square
 brackets.
 
 ### 1.3 Numerical Misinterpretation
@@ -91,19 +92,19 @@ misinterpreted as numerical integers with mathematical implications.
 
 ## 2 Recommendations
 
-1.  When the boolean data type exists, 0 and 1 do not behave like traditional integers (where 1 + 1 = 2 ). Rather they are binary representations of a true/false concept. A clear distinction is crucial to mitigate the risk of misinterpreting boolean data values as integers with mathematical implications. Camel-cased terms expecting boolean values should be prefaced with *is* (e.g., isExtinct, isTypeSpecimen). Snake-cased terms should be appended with *\_yn* (e.g., extinct_yn, type_speciment_yn).
+1.  When the boolean data type exists, 0 and 1 do not behave like traditional integers (where 1 + 1 = 2 ). Rather they are binary representations of a true/false concept. A clear distinction is crucial to mitigate the risk of misinterpreting boolean data values as integers with mathematical implications. Camel-cased terms expecting boolean values should be prefaced with *is* (e.g., isExtinct, isTypeSpecimen). Snake-cased terms should be appended with *\_yn* (e.g., extinct_yn, type_specimen_yn).
 
 2.  The boolean enumerated domain \[true, false\] is the most interoperable domain with the widest support by major programming languages and database technologies.
 
 3.  The numeric boolean enumerated domain \[0, 1\] should be used for ETL (Extract, Transform, Load) processes with database technologies that lack native boolean support. Otherwise, the numeric domain should be avoided to mitigate risks associated with numerical misinterpretation.
 
-4.  The values `true` and `false` should always be lowercase to minimize the interoperability issues with case-sensitive systems. The casing changes should be strictly need based in cases where capitalization is necessary for compatibility. For example, Python boolean values are proper-cased (True, False). Usage of the proper-cased versions of true and false should be strictly limited to the python application codebase where it is needed for compatibility.
+4.  The values `true` and `false` should always be lowercase to minimize the interoperability issues with case-sensitive systems. The casing changes should be strictly need based in cases where capitalization is necessary for compatibility. For example, Python boolean values are proper-cased (True, False). Usage of the proper-cased versions of true and false should be strictly limited to the Python application codebase where it is needed for compatibility.
 
 5.  Do not use abbreviations for boolean values (e.g., `T`, `F`, `t`). Abbreviations can be easily misinterpreted and are weak concept representations.
 
 6.  Null is not a boolean value and therefore does not belong in a column with a boolean data type. A default value should be assigned to boolean data types to avoid null values entirely. If a *null* value is needed to express a property accurately, then the table and column decisions should be re-evaluated.
 
-7.  Character string values that belong to a boolean enumerated domain should not be localized. For example, the French translations of `true` and `false`, `*vrai*` and `*faux*`*,* are not valid boolean enumerated domain values.
+7.  Character string values that belong to a boolean enumerated domain should not be localized. For example, the French translations of `true` and `false`, `vrai` and `faux`, are not valid boolean enumerated domain values.
 
 8.  To accommodate the *not null* restriction, columns defined using the boolean data type in database schemas should always include a default boolean enumerated domain value.
 
@@ -114,7 +115,7 @@ misinterpreted as numerical integers with mathematical implications.
 
 | Database | Domains | Data Type | Remarks |
 | -------- | ------- | --------- | ------- |
-| MySQL    |    \[1,0\]                |               TINYINT(1)   MySQL does not provide native support for the boolean data type. Instead, boolean values as commonly stored as 0 or 1 in the single byte data type, TINYINT(1) |
+| MySQL    |    \[1,0\]                |               TINYINT(1)  | MySQL does not provide native support for the boolean data type. Instead, boolean values as commonly stored as 0 or 1 in the single byte data type, TINYINT(1) |
 | PostgreSQL  | \[on,off\], \[true/false\], \[1,0\] |  BOOL     |    In PostgreSQL, the boolean enumerated domain consists of 3 pairs of two-state values (six values in total). Boolean values must be consistent. Mixing values from two or more pairs within a single column is not allowed. |
 | MSSQL    |    \[1,0\]          |                     BIT     |     MSSQL does not provide native support for the boolean data type. The common practice is to store boolean values in a BIT data type column as 0 or 1. |
 | MS Access  |  \[Yes,No\]               |             Yes/No  |     MS Access does not directly support boolean data types. Instead, MS Access provides a Yes/No data type that may be formatted in three ways for front-end presentation (Yes/No, True/False, On/Off). In Access, Yes/No data type is equivalent to the SQL Data Type BIT with one minor adjustment. In Access, Yes (true) is stored as -1, and No (false) is stored as 0. If no value is provided, the Yes/No data type defaults to No. |
@@ -162,50 +163,46 @@ or strings; these include integer, floating-point, character string 
 
 ### Table 2B. References
 
-  Language                                       Reference
-  ---------------------------------------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Python                                         [*[https://docs.python.org/3/library/stdtypes.html?highlight=boolean]{.ul}*](https://docs.python.org/3/library/stdtypes.html?highlight=boolean)
-  Java                                           [*[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html]{.ul}*](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
-  C\#                                            [*[https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool]{.ul}*](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool)
-  PHP                                            [*[https://www.php.net/manual/en/language.types.boolean.php]{.ul}*](https://www.php.net/manual/en/language.types.boolean.php)
-  JavaScript                                     [*[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean]{.ul}*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-  Perl                                           *[[https://perlmaven.com/boolean-values-in-perl]{.ul}](https://perlmaven.com/boolean-values-in-perl), [[https://metacpan.org/pod/boolean]{.ul}](https://metacpan.org/pod/boolean)*
-  Ruby                                           *[https://www.rubyguides.com/2019/02/ruby-booleans/]{.ul}*
-  Visual Basic (Visual Basic for Applications)   [*[https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/boolean-data-type]{.ul}*](https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/boolean-data-type)
-
- 
+|  Language                 |                      Reference |
+| --- | --- |
+| Python                                      |   [*[https://docs.python.org/3/library/stdtypes.html?highlight=boolean]{.ul}*](https://docs.python.org/3/library/stdtypes.html?highlight=boolean) |
+| Java                                       |    [*[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html]{.ul}*](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html) |
+| C\#                                       |     [*[https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool]{.ul}*](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool) |
+| PHP                                      |      [*[https://www.php.net/manual/en/language.types.boolean.php]{.ul}*](https://www.php.net/manual/en/language.types.boolean.php) |
+| JavaScript                                |     [*[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean]{.ul}*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) |
+| Perl                                      |     *[[https://perlmaven.com/boolean-values-in-perl]{.ul}](https://perlmaven.com/boolean-values-in-perl), [[https://metacpan.org/pod/boolean]{.ul}](https://metacpan.org/pod/boolean)* |
+| Ruby                                     |      *[https://www.rubyguides.com/2019/02/ruby-booleans/]{.ul}* |
+| Visual Basic (Visual Basic for Applications)  | [*[https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/boolean-data-type]{.ul}*](https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/boolean-data-type) \ |
 
 ### Table 2C. JavaScript Boolean
 
-  Operator             boolean                         Boolean
-  -------------------- ------------------------------- ---------
-  typeof               boolean (primitive data type)   object
-  instanceof Boolean   false                           true
+| Operator         |    boolean         |                Boolean |
+| -------------------- | ------------------------------- | --------- |
+| typeof          |     boolean (primitive data type) |  object |
+| instanceof Boolean |  false                         |  true |
 
 Source:
 [[https://www.javascripttutorial.net/javascript-boolean/]{.ul}](https://www.javascripttutorial.net/javascript-boolean/)
 
 ### Table 3A. File Formats
 
-  Format   Values            Remarks
-  -------- ----------------- -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  JSON     \[true, false\]   JSON boolean values are represented as the character strings, true and false. In JSON, alphanumeric character strings are qualified with double quotation marks. Boolean value strings are not (see example below).
-  XML      \[true, false\]   As defined in the XML Schema Official Documentation (see references), the boolean data type (xs:boolean) belongs to the group of primitive data types. It supports the mathematical concept of binary logic (true/false). Boolean data type values are represented using two enumerated domains \[true, false\] or \[0, 1\]
+| Format |  Values      |     Remarks|
+| -------- | ----------------- | ------- |
+| JSON   |  \[true, false\] |  JSON boolean values are represented as the character strings, true and false. In JSON, alphanumeric character strings are qualified with double quotation marks. Boolean value strings are not (see example below). |
+| XML   |   \[true, false\] |  As defined in the XML Schema Official Documentation (see references), the boolean data type (xs:boolean) belongs to the group of primitive data types. It supports the mathematical concept of binary logic (true/false). Boolean data type values are represented using two enumerated domains \[true, false\] or \[0, 1\] |
 
  
 
 ### Table 3B. References
 
-  Format      Reference
-  ----------- -------------------------------------------------------------------------------------------------------------------------------------------------------------
-   JSON       [[https://json-schema.org/understanding-json-schema/reference/boolean.html]{.ul}](https://json-schema.org/understanding-json-schema/reference/boolean.html)
-  XML (XSD)   [[https://www.w3.org/TR/xmlschema-2/\#boolean]{.ul}](https://www.w3.org/TR/xmlschema-2/#boolean)
+| Format   |   Reference |
+----------- ------- |
+| JSON     |  [[https://json-schema.org/understanding-json-schema/reference/boolean.html]{.ul}](https://json-schema.org/understanding-json-schema/reference/boolean.html) |
+| XML (XSD) |  [[https://www.w3.org/TR/xmlschema-2/\#boolean]{.ul}](https://www.w3.org/TR/xmlschema-2/#boolean) |
 
 ### JSON Example
 
-![Text Description automatically
-generated](media/image1.png){width="3.8489588801399823in"
-height="2.025767716535433in"}
+![JSON example](json.png)
 
 ## Appendix 2. Brief History of Boolean
 ------------------------------------
@@ -224,26 +221,3 @@ not something is true or false. Here, all variables have a value of 0 or
 1, referred to as boolean values. Boolean values (also known as truth
 values) are commonly represented using enumerated domains containing
 value pairs (true/false, 0,1, on/off, yes/no).
-
-## Appendix C. Document Meta
--------------------------
-
-**Contact:**
-
-Ben Norton
-
-Head of Technology and Collections Data Curator, NCMNS
-
-[*[ben.norton\@naturalsciences.org]{.ul}*](mailto:ben.norton@naturalsciences.org)
-
-**Reviewers:**
-
-Steve Baskauf
-
-Tim Robertson
-
-John Wieczorek
-
-**Version**: 20230306.1
-
-**Last Modified**: 2023-03-06
