@@ -128,12 +128,12 @@ misinterpreted as numerical integers with mathematical implications.
 
 | Database  |   Reference |
 ------------ ------------- |
-| MySQL     |   [https://dev.mysql.com/doc/refman/8.0/en/data-types.html](https://dev.mysql.com/doc/refman/8.0/en/data-types.html) |
-| PostgreSQL |  [https://www.postgresql.org/docs/14/datatype-boolean.html](https://www.postgresql.org/docs/14/datatype-boolean.html) |
-| MSSQL    |    [https://docs.microsoft.com/en-us/sql/t-sql/data-types/bit-transact-sql?view=sql-server-ver16](https://docs.microsoft.com/en-us/sql/t-sql/data-types/bit-transact-sql?view=sql-server-ver16) |
-| MS Access  |  [https://docs.microsoft.com/en-us/office/vba/api/access.format.propertyyes.no](https://docs.microsoft.com/en-us/office/vba/api/access.format.propertyyes.no) |
-| Oracle    |   [https://docs.oracle.com/cd/B19306_01/olap.102/b14346/dml_datatypes004.htm](https://docs.oracle.com/cd/B19306_01/olap.102/b14346/dml_datatypes004.htm) |
-| SQLite    |   [[https://www.sqlite.org/datatype3.html](https://www.sqlite.org/datatype3.html) |
+| MySQL     |   <https://dev.mysql.com/doc/refman/8.0/en/data-types.html> |
+| PostgreSQL |  <https://www.postgresql.org/docs/14/datatype-boolean.html> |
+| MSSQL    |    <https://docs.microsoft.com/en-us/sql/t-sql/data-types/bit-transact-sql?view=sql-server-ver16> |
+| MS Access  |  <https://docs.microsoft.com/en-us/office/vba/api/access.format.propertyyes.no> |
+| Oracle    |   <https://docs.oracle.com/cd/B19306_01/olap.102/b14346/dml_datatypes004.htm> |
+| SQLite    |   <https://www.sqlite.org/datatype3.html> |
 
 ### Table 2A. Programming Languages
 
@@ -153,8 +153,7 @@ misinterpreted as numerical integers with mathematical implications.
 
 | Ruby                 | *See remarks*        | Ruby doesn't have a  boolean data type.   Instead, it has      boolean **objects**. It has *true* and    *false*, which are   singleton objects of **TrueClass** &      **FalseClass**. You  receive a boolean    value with methods   like *empty?*,       *all?*, or *match?*  |
 
-| Visual Basic for     | \[True,False\]       | VBA (a version of    |
-| Applications         |                      | Visual Basic) is     used to extend the   functionality of     Microsoft Office     applications.        Outside of MS        Office, VBA cannot   function. Given its  usage with Excel and MS Access, VBA is    included in this     document. Native     support for the      boolean data type in MS Excel and MS      Access can only be   achieved through a   VBA module.          |
+| Visual Basic for Applications    | \[True,False\]       | VBA (a version of  Visual Basic) is     used to extend the   functionality of     Microsoft Office     applications.        Outside of MS        Office, VBA cannot   function. Given its  usage with Excel and MS Access, VBA is    included in this     document. Native     support for the      boolean data type in MS Excel and MS      Access can only be   achieved through a   VBA module.          |
 
 
 \*In Perl, a scalar value is a single numeric or string value. Perl
@@ -165,14 +164,14 @@ or strings; these include integer, floating-point, character string 
 
 |  Language                 |                      Reference |
 | --- | --- |
-| Python                                      |   [*[https://docs.python.org/3/library/stdtypes.html?highlight=boolean]{.ul}*](https://docs.python.org/3/library/stdtypes.html?highlight=boolean) |
-| Java                                       |    [*[https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html]{.ul}*](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html) |
-| C\#                                       |     [*[https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool]{.ul}*](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool) |
-| PHP                                      |      [*[https://www.php.net/manual/en/language.types.boolean.php]{.ul}*](https://www.php.net/manual/en/language.types.boolean.php) |
-| JavaScript                                |     [*[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean]{.ul}*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) |
-| Perl                                      |     *[[https://perlmaven.com/boolean-values-in-perl]{.ul}](https://perlmaven.com/boolean-values-in-perl), [[https://metacpan.org/pod/boolean]{.ul}](https://metacpan.org/pod/boolean)* |
-| Ruby                                     |      *[https://www.rubyguides.com/2019/02/ruby-booleans/]{.ul}* |
-| Visual Basic (Visual Basic for Applications)  | [*[https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/boolean-data-type]{.ul}*](https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/boolean-data-type) \ |
+| Python                                      |   <https://docs.python.org/3/library/stdtypes.html?highlight=boolean> |
+| Java                                       |    <https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html> |
+| C\#                                       |     <https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/bool> |
+| PHP                                      |      <https://www.php.net/manual/en/language.types.boolean.php> |
+| JavaScript                                |     <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean> |
+| Perl                                      |     <https://perlmaven.com/boolean-values-in-perl>, <https://metacpan.org/pod/boolean> |
+| Ruby                                     |      <https://www.rubyguides.com/2019/02/ruby-booleans/> |
+| Visual Basic (Visual Basic for Applications)  | <https://docs.microsoft.com/en-us/dotnet/visual-basic/language-reference/data-types/boolean-data-type> |
 
 ### Table 2C. JavaScript Boolean
 
@@ -182,7 +181,7 @@ or strings; these include integer, floating-point, character string 
 | instanceof Boolean |  false                         |  true |
 
 Source:
-[[https://www.javascripttutorial.net/javascript-boolean/]{.ul}](https://www.javascripttutorial.net/javascript-boolean/)
+<https://www.javascripttutorial.net/javascript-boolean/>
 
 ### Table 3A. File Formats
 
