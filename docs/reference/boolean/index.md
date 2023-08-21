@@ -126,14 +126,14 @@ misinterpreted as numerical integers with mathematical implications.
 
 ### Table 1B. Database References
 
-  Database     Reference
-  ------------ -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  MySQL        [[https://dev.mysql.com/doc/refman/8.0/en/data-types.html]{.ul}](https://dev.mysql.com/doc/refman/8.0/en/data-types.html)
-  PostgreSQL   [[https://www.postgresql.org/docs/14/datatype-boolean.html]{.ul}](https://www.postgresql.org/docs/14/datatype-boolean.html)
-  MSSQL        [[https://docs.microsoft.com/en-us/sql/t-sql/data-types/bit-transact-sql?view=sql-server-ver16]{.ul}](https://docs.microsoft.com/en-us/sql/t-sql/data-types/bit-transact-sql?view=sql-server-ver16)
-  MS Access    [[https://docs.microsoft.com/en-us/office/vba/api/access.format.propertyyes.no]{.ul}](https://docs.microsoft.com/en-us/office/vba/api/access.format.propertyyes.no)
-  Oracle       [[https://docs.oracle.com/cd/B19306_01/olap.102/b14346/dml_datatypes004.htm]{.ul}](https://docs.oracle.com/cd/B19306_01/olap.102/b14346/dml_datatypes004.htm)
-  SQLite       [[https://www.sqlite.org/datatype3.html]{.ul}](https://www.sqlite.org/datatype3.html)
+| Database  |   Reference |
+------------ ------------- |
+| MySQL     |   [https://dev.mysql.com/doc/refman/8.0/en/data-types.html](https://dev.mysql.com/doc/refman/8.0/en/data-types.html) |
+| PostgreSQL |  [https://www.postgresql.org/docs/14/datatype-boolean.html](https://www.postgresql.org/docs/14/datatype-boolean.html) |
+| MSSQL    |    [https://docs.microsoft.com/en-us/sql/t-sql/data-types/bit-transact-sql?view=sql-server-ver16](https://docs.microsoft.com/en-us/sql/t-sql/data-types/bit-transact-sql?view=sql-server-ver16) |
+| MS Access  |  [https://docs.microsoft.com/en-us/office/vba/api/access.format.propertyyes.no](https://docs.microsoft.com/en-us/office/vba/api/access.format.propertyyes.no) |
+| Oracle    |   [https://docs.oracle.com/cd/B19306_01/olap.102/b14346/dml_datatypes004.htm](https://docs.oracle.com/cd/B19306_01/olap.102/b14346/dml_datatypes004.htm) |
+| SQLite    |   [[https://www.sqlite.org/datatype3.html](https://www.sqlite.org/datatype3.html) |
 
 ### Table 2A. Programming Languages
 
