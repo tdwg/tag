@@ -157,4 +157,5 @@ The point is that care must be taken to ensure that any necessary boolean dataty
 
 <a id="4"></a>[4] Model for Tabular Data and Metadata on the Web, https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/#formats-for-booleans
 
-<a id="5"></a>[5] Technical Architecture Group (TAG). 2023. Boolean Values Best Practices Reference. Biodiversity Information Standards (TDWG). URL here
+<a id="5"></a>[5] Technical Architecture Group. 2023. Boolean Values Best Practices Reference. Biodiversity Information Standards
+(TDWG). ../../reference/boolean/
