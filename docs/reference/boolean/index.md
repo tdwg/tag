@@ -196,8 +196,8 @@ Source:
 
 | Format   |   Reference |
 ----------- ------- |
-| JSON     |  [[https://json-schema.org/understanding-json-schema/reference/boolean.html]{.ul}](https://json-schema.org/understanding-json-schema/reference/boolean.html) |
-| XML (XSD) |  [[https://www.w3.org/TR/xmlschema-2/\#boolean]{.ul}](https://www.w3.org/TR/xmlschema-2/#boolean) |
+| JSON     |  <https://json-schema.org/understanding-json-schema/reference/boolean.html> |
+| XML (XSD) |  <https://www.w3.org/TR/xmlschema-2/#boolean> |
 
 ### JSON Example
 
