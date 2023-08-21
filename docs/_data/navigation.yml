@@ -10,5 +10,9 @@
   menu:
   - text: Best practices for booleans
     href: /guides/boolean/
+- text: Reference
+  menu:
+  - text: Boolean Values Best Practices Reference
+    href: /reference/boolean/
 - text: GitHub
   href: https://github.com/tdwg/tag
