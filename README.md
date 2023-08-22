@@ -21,7 +21,7 @@ James Macklin - Agriculture and Agri-Food Canada. Past chair. [james.macklin@agr
 
 Raïssa Meyer -  Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research. GBWG - Sustainable Darwin Core MIxS Interoperability Task Group. [raissa.meyer@awi.de](mailto:raissa.meyer@awi.de)
 
-Ben Norton (deputy chair) - North Carolina Museum of Natural Sciences - TDWG Biodiversity Services and Clients Interest Group and Cameratrap DP. [ben.norton@naturalsciences.org](mailto:ben.norton@naturalsciences.org)
+Ben Norton (deputy chair) - Independent - TDWG Biodiversity Services and Clients Interest Group and Cameratrap DP. [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)
 
 Rod Page - University of Glasgow. Wikidata and Linked Data applications. [rdmpage@gmail.com](mailto:rdmpage@gmail.com)
 
