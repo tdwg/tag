@@ -8,9 +8,11 @@ The charter of the group can be viewed at <https://www.tdwg.org/about/committees
 
 Following each name is affiliation and TDWG group represented or interest.
 
-Steve Baskauf (chair) - Vanderbilt University Heard Libraries. Audubon Core and Darwin Core Maintenance Groups. [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
+Ben Norton (Chair) - Independent - Mineralogy Extension TG, Latimer Core Review Manager, Darwin Core Maintenance Group, Camtrap DP. [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)
 
-Ian Engelbrecht - Natural Science Collections Facility, South Africa. Collections digitization and identifiers. [ian@nscf.org.za](mailto:ian@nscf.org.za)
+Steve Baskauf (chair emeritus)- Vanderbilt University Heard Libraries. Audubon Core and Darwin Core Maintenance Groups. [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
+
+Ian Engelbrecht - Natural Science Collections Facility, South Africa. Collections, digitization, and identifiers. [ian@nscf.org.za](mailto:ian@nscf.org.za)
 
 David Fichtmueller - Botanic Garden and Botanical Museum (BGBM) Berlin. ABCD Schema. [D.Fichtmueller@bgbm.org](mailto:D.Fichtmueller@bgbm.org)
 
@@ -20,8 +22,6 @@ Kristen (Kit) Lewers - University of Colorado. Information science.
 James Macklin - Agriculture and Agri-Food Canada. Past chair. [james.macklin@agr.gc.ca](mailto:james.macklin@agr.gc.ca)
 
 Raïssa Meyer -  Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research. GBWG - Sustainable Darwin Core MIxS Interoperability Task Group. [raissa.meyer@awi.de](mailto:raissa.meyer@awi.de)
-
-Ben Norton (deputy chair) - Independent - TDWG Biodiversity Services and Clients Interest Group and Cameratrap DP. [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)
 
 Rod Page - University of Glasgow. Wikidata and Linked Data applications. [rdmpage@gmail.com](mailto:rdmpage@gmail.com)
 
@@ -38,4 +38,4 @@ Sarah Vincent - Natural History Museum, London. Latimer Core (Collection Descrip
 John Wieczorek - VertNet. Rauthiflor LLC. Darwin Core Maintenance Group. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)
 
 ----
-Revised 2022-12-15
+Revised 2024-02-22
