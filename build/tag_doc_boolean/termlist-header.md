@@ -16,7 +16,7 @@ Date created
 : {created_date}
 
 Part of TDWG Standard
-: <{standard_iri}>
+: Not part of any standard
 
 This version
 : <{current_iri}{ratification_date}>

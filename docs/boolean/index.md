@@ -1,29 +1,40 @@
-# Boolean Controlled Vocabulary
+# TDWG Boolean Controlled Vocabulary List of Terms
 
-**Title:** TDWG Boolean Controlled Vocabulary
+Title
+: TDWG Boolean Controlled Vocabulary List of Terms
 
-**Namespace URI:** http://rs.tdwg.org/boolean/values/
+Namespace IRI
+: http://rs.tdwg.org/boolean/values/
 
-**Preferred namespace abbreviation:** boolean:
+Preferred namespace abbreviation
+: boolean:
 
-**Date version issued:** 2023-03-13
+Date version issued
+: 2023-03-13
 
-**Date created:** 2023-03-13
+Date created
+: 2023-03-13
 
-**Part of TDWG Standard:** Not part of any standard
+Part of TDWG Standard
+: Not part of any standard
 
-**This version:** http://rs.tdwg.org/tag/doc/boolean/2023-03-13
+This version
+: <http://rs.tdwg.org/tag/doc/boolean/2023-03-13>
 
-**Latest version:** http://rs.tdwg.org/tag/doc/boolean/
+Latest version
+: <http://rs.tdwg.org/tag/doc/boolean/>
 
-**Abstract:** This vocabulary is intended to be used TDWG-wide in cases where properties specify boolean values. 
+Abstract
+: This vocabulary is intended to be used TDWG-wide in cases where properties specify boolean values.
 
-**Contributors:** Ben Norton, Steven J. Baskauf
+Contributors
+: [Steven J. Baskauf](https://orcid.org/0000-0003-4365-3135) ([Vanderbilt University Libraries](http://www.wikidata.org/entity/Q16849893)), [Ben Norton](https://orcid.org/0000-0002-5819-9134) 
 
-**Creator:** TDWG Technical Architecture Group
+Creator
+: TDWG Technical Architecture Group
 
-**Bibliographic citation:** Technical Architecture Group. 2023. Boolean Controlled Vocabulary. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/tag/doc/boolean/2023-03-13>
-
+Bibliographic citation
+: TDWG Technical Architecture Group. 2023. TDWG Boolean Controlled Vocabulary List of Terms. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/tag/doc/boolean/2023-03-13>
 
 ## 1 Introduction
 
@@ -52,8 +63,7 @@ In Linked Data contexts (i.e. RDF), native boolean values SHOULD be used rather 
 
 Instead of creating the term `ex:required` with recommended values "yes" and "no", create the term `ex:isRequired` with recommended values from this vocabulary. Instead of creating the term `ex:presence` with recommended values "present" and "absent", create the term `ex:isPresent` with recommended values from this vocabulary. 
 
-## 3 Term index
-
+## 3 Term Index 
 
 [boolean values concept scheme](#boolean_b) |
 [false](#boolean_b0) |
@@ -73,11 +83,11 @@ Instead of creating the term `ex:required` with recommended values "yes" and "no
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2022-09-22</td>
+			<td>2023-03-13</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="http://rs.tdwg.org/boolean/values/version/b-2022-09-22">http://rs.tdwg.org/boolean/values/version/b-2022-09-22</a></td>
+			<td><a href="http://rs.tdwg.org/boolean/values/version/b-2023-03-13">http://rs.tdwg.org/boolean/values/version/b-2023-03-13</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -107,11 +117,11 @@ Instead of creating the term `ex:required` with recommended values "yes" and "no
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2022-09-22</td>
+			<td>2023-03-13</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="http://rs.tdwg.org/boolean/values/version/b0-2022-09-22">http://rs.tdwg.org/boolean/values/version/b0-2022-09-22</a></td>
+			<td><a href="http://rs.tdwg.org/boolean/values/version/b0-2023-03-13">http://rs.tdwg.org/boolean/values/version/b0-2023-03-13</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
@@ -149,11 +159,11 @@ Instead of creating the term `ex:required` with recommended values "yes" and "no
 		</tr>
 		<tr>
 			<td>Modified</td>
-			<td>2022-09-22</td>
+			<td>2023-03-13</td>
 		</tr>
 		<tr>
 			<td>Term version IRI</td>
-			<td><a href="http://rs.tdwg.org/boolean/values/version/b1-2022-09-22">http://rs.tdwg.org/boolean/values/version/b1-2022-09-22</a></td>
+			<td><a href="http://rs.tdwg.org/boolean/values/version/b1-2023-03-13">http://rs.tdwg.org/boolean/values/version/b1-2023-03-13</a></td>
 		</tr>
 		<tr>
 			<td>Label</td>
