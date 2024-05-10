@@ -8,7 +8,7 @@ The charter of the group can be viewed at <https://www.tdwg.org/about/committees
 
 Following each name is affiliation and TDWG group represented or interest.
 
-Ben Norton (Chair) - Independent - Mineralogy Extension TG, Latimer Core Review Manager, Darwin Core Maintenance Group, Camtrap DP. [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)
+Ben Norton (Chair) - Independent - Mineralogy Extension TG Co-convener, Latimer Core Review Manager, Plinian Core Reviewer, MIDS Contributer, Darwin Core Maintenance Group, Camtrap DP. [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)
 
 Steve Baskauf (chair emeritus)- Vanderbilt University Heard Libraries. Audubon Core and Darwin Core Maintenance Groups. [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
 
