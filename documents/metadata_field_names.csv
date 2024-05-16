@@ -16,6 +16,6 @@ Decision (RECOMMENDED),non-normative,"(is not implemented, but should be)",Execu
 "Controlled value (REQUIRED for controlled vocabs, N/A for metadata schemas)",normative,N/A,N/A,Controlled value,(not used),rdf:value
 ,non-normative,(not used),(not used),Definition derived from or Refer to semantic model,(not used),sawsdlrdf:modelReference
 ,normative,N/A,N/A,Has broader concept,(not used),skos:broader
-,non-normative according to section 1.1,(not used),(not used),(not used),Datatype,(not mapped to an RDF property)
+,non-normative according to section 1.1,(not used),(not used),(not used),Datatype,rdf:datatype
 ,non-normative,"(not exposed, used to group)","(not exposed, used to group)",(not used),Belongs to Class,tdwgutility:organizedInClass
 ,,,,,SKOS Mappings,(won’t be directly exposed in RDF)
