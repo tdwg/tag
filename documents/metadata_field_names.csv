@@ -1,0 +1,21 @@
+Fields required Section 3.3.3.1 of the SDS,normative/non-normative,AC List of Terms,DwC List of Terms,controlled vocabularies,LtC,RDF property
+Term Name (REQUIRED),non-normative in that the namespace abbreviation is based on convention ,Term Name,Term Name,Term Name,Qualified Term (“Term Name” is not used in accordance with the SDS),N/A (the subject of the triple)
+Term IRI (REQUIRED),normative,Normative URI,Term IRI,Term IRI,Term IRI,N/A (the subject of the triple)
+Term version IRI (REQUIRED),normative,Term version URI,Term version IRI,Term version IRI,(missing),N/A (the subject of the triple)
+Modified (RECOMMENDED),non-normative,Modified,Modified,Modified,(missing),dcterms:modified
+Label (RECOMMENDED),non-normative,Label,Label,Label,Label,rdfs:label and skos:prefLabel
+Definition (REQUIRED),normative,Definition,Definition,Definition,Definition,rdfs:comment and skos:definition
+Type (REQUIRED),normative,"(All AC terms but one are properties, so type not included in the table)",Type,Type,RDF Type,rdf:type
+Decision (RECOMMENDED),non-normative,"(is not implemented, but should be)",Executive Committee decision,Executive Committee decision,(missing),(not exposed in the RDF)
+,normative,Usage,(not used),Usage,Usage,skos:scopeNote
+,non-normative,Notes,Notes,Notes,Notes,dcterms:description
+,non-normative,(examples included in notes),Examples,(not used),Examples,skos:example
+,normative,Required,(not used),(not used),Required,tdwgutility:required
+,normative,Repeatable,(not used),(not used),Repeatable,tdwgutility:repeatable
+,non-normative,N/A,ABCD equivalence,(not used),(not used),tdwgutility:abcdEquivalence
+"Controlled value (REQUIRED for controlled vocabs, N/A for metadata schemas)",normative,N/A,N/A,Controlled value,(not used),rdf:value
+,non-normative,(not used),(not used),Definition derived from or Refer to semantic model,(not used),sawsdlrdf:modelReference
+,normative,N/A,N/A,Has broader concept,(not used),skos:broader
+,non-normative according to section 1.1,(not used),(not used),(not used),Datatype,(not mapped to an RDF property)
+,non-normative,"(not exposed, used to group)","(not exposed, used to group)",(not used),Belongs to Class,tdwgutility:organizedInClass
+,,,,,SKOS Mappings,(won’t be directly exposed in RDF)
