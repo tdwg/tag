@@ -7,6 +7,8 @@ The charter of the group can be viewed at <https://www.tdwg.org/about/committees
 ## TAG members - 2025
 
 Ben Norton (Chair) - Independent [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)  
+
+Wouter Addink - Naturalis [wouter.addink@naturalis.nl](mailto:wouter.addink@naturalis.nl)
 Steve Baskauf (chair emeritus) - Vanderbilt University Heard Libraries. [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)  
 David Bloom - VertNET, TDWG Chair [dbloom@vertnet.org](dbloom@vertnet.org)  
 David Fichtmueller - Botanic Garden and Botanical Museum (BGBM) Berlin. [D.Fichtmueller@bgbm.org](mailto:D.Fichtmueller@bgbm.org)  
