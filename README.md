@@ -6,21 +6,21 @@ The charter of the group can be viewed at <https://www.tdwg.org/about/committees
 
 ## TAG members - 2025
 
-Ben Norton (Chair) - Independent [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)
-Steve Baskauf (chair emeritus) - Vanderbilt University Heard Libraries. Audubon Core and Darwin Core Maintenance Groups. [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)
-David Bloom - VertNET, TDWG Chair [dbloom@vertnet.org](dbloom@vertnet.org)
-David Fichtmueller - Botanic Garden and Botanical Museum (BGBM) Berlin. ABCD Schema. [D.Fichtmueller@bgbm.org](mailto:D.Fichtmueller@bgbm.org)
-Erica Krimmel - Independent [ekrimmel@gmail.com](ekrimmel@gmail.com)
-John Kunze - [jakkbl@gmail.com](jakkbl@gmail.com)
-Kristen (Kit) Lewers - University of Colorado. Information science. [kristen.lewers@colorado.edu](mailto:kristen.lewers@colorado.edu)
-James Macklin - Agriculture and Agri-Food Canada. Past chair. [james.macklin@agr.gc.ca](mailto:james.macklin@agr.gc.ca)
-Raïssa Meyer -  Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research. GBWG - Sustainable Darwin Core MIxS Interoperability Task Group. [raissa.meyer@awi.de](mailto:raissa.meyer@awi.de)
-Nicky Nicolson - [n.nicolson@kew.org](n.nicolson@kew.org)
-Tim Robertson - Global Biodiversity Information Facility (GBIF). TDWG Infrastructure Sub Committee Chair and member of the Darwin Core Maintenance Group. [trobertson@gbif.org](mailto:trobertson@gbif.org)
-David Shorthouse - [davidpshorthouse@gmail.com](mailto:davidpshorthouse@gmail.com)
-Cecilie Svenningsen - Global Biodiversity Information Facility (GBIF) [csvenningsen@gbif.org](csvenningsen@gbif.org)
-Greg Whitbread - [whitbread.greg@gmail.com](whitbread.greg@gmail.com)
-John Wieczorek - Global Biodiversity Information Facility (GBIF). Rauthiflor LLC. Darwin Core Maintenance Group. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)
+Ben Norton (Chair) - Independent [michaelnorton.ben@gmail.com](mailto:michaelnorton.ben@gmail.com)  
+Steve Baskauf (chair emeritus) - Vanderbilt University Heard Libraries. Audubon Core and Darwin Core Maintenance Groups. [steve.baskauf@vanderbilt.edu](mailto:steve.baskauf@vanderbilt.edu)  
+David Bloom - VertNET, TDWG Chair [dbloom@vertnet.org](dbloom@vertnet.org)  
+David Fichtmueller - Botanic Garden and Botanical Museum (BGBM) Berlin. ABCD Schema. [D.Fichtmueller@bgbm.org](mailto:D.Fichtmueller@bgbm.org)  
+Erica Krimmel - Independent [ekrimmel@gmail.com](ekrimmel@gmail.com)  
+John Kunze - [jakkbl@gmail.com](jakkbl@gmail.com)  
+Kristen (Kit) Lewers - University of Colorado. Information science. [kristen.lewers@colorado.edu](mailto:kristen.lewers@colorado.edu)  
+James Macklin - Agriculture and Agri-Food Canada. Past chair. [james.macklin@agr.gc.ca](mailto:james.macklin@agr.gc.ca)  
+Raïssa Meyer -  Alfred Wegener Institute, Helmholtz Centre for Polar and Marine Research. GBWG - Sustainable Darwin Core MIxS Interoperability Task Group. [raissa.meyer@awi.de](mailto:raissa.meyer@awi.de)  
+Nicky Nicolson - [n.nicolson@kew.org](n.nicolson@kew.org)  
+Tim Robertson - Global Biodiversity Information Facility (GBIF). TDWG Infrastructure Sub Committee Chair and member of the Darwin Core Maintenance Group. [trobertson@gbif.org](mailto:trobertson@gbif.org)  
+David Shorthouse - [davidpshorthouse@gmail.com](mailto:davidpshorthouse@gmail.com)  
+Cecilie Svenningsen - Global Biodiversity Information Facility (GBIF) [csvenningsen@gbif.org](csvenningsen@gbif.org)  
+Greg Whitbread - [whitbread.greg@gmail.com](whitbread.greg@gmail.com)  
+John Wieczorek - Global Biodiversity Information Facility (GBIF). Rauthiflor LLC. Darwin Core Maintenance Group. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)  
 
 ----
 Revised 2025-03-05
