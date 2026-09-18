@@ -6,7 +6,6 @@ The group's charter can be viewed at <https://www.tdwg.org/about/committees/tag/
 
 ## TAG members - 2026
 
-Ben Norton (Chair) - Yale University [ben.norton@yale.edu](mailto:ben.norton@yale.edu)  
 Wouter Addink - Naturalis [wouter.addink@naturalis.nl](mailto:wouter.addink@naturalis.nl)  
 Steve Baskauf (chair emeritus) - [steve.baskauf@gmail.com](mailto:steve.baskauf@gmail.com)  
 Matthew Blisset - Global Biodiversity Information Facility (GBIF). [mblissett@gbif.org](mailto:mblissett@gbif.org)
@@ -26,5 +25,7 @@ Kate Webbink - Field Museum. [kwebbink@fieldmuseum.org](mailto:kwebbink@fieldmus
 Greg Whitbread - Australian National Botanic Gardens. [whitbread.greg@gmail.com](mailto:whitbread.greg@gmail.com)  
 John Wieczorek - Global Biodiversity Information Facility (GBIF). Rauthiflor LLC. [gtuco.btuco@gmail.com](mailto:gtuco.btuco@gmail.com)  
 
+Ben Norton (Past Chair) - Yale University [ben.norton@yale.edu](mailto:ben.norton@yale.edu)  
+
 ----
-Revised 2026-03-07
+Revised 2026-09-18
